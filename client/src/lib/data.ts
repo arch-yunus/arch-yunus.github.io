@@ -189,8 +189,130 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
   ],
 
   categories: {
-    "Yapay Zeka & LLM": ["Nexus-TRL-LLM", "ANKA-LLM", "NeuroPaint", "LibraMind", "Open-Textile-Intelligence", "TRL-Bio-Compute", "Math2Code-A-Practical-Guide-for-Developers"],
-    "Siber Güvenlik": ["SIGINT", "cyber_security_btk_t3A", "Digital-Archaeology-Steganography-Vault", "TRL-Quantum-Edge", "TRL-Hardware-Pulse"],
+    "Yapay Zeka & LLM": [
+      {
+        name: 'Yapay Zekâ ile İçerik Üretimi Eğitimi - Malatya',
+        issuer: 'BTK Akademi',
+        date: 'Temmuz 2026',
+        credential_id: 'DV70UrNE'
+      },
+      {
+        name: 'Web Konferans Araçlarına Ait Temel Kavramlar ve Başlıca Avantajlar',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'f0c789ea-1750-40e1-acd2-aced9ca5226e'
+      },
+      {
+        name: 'Herkes için Yapay Zeka I',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '9b675ab7-bab4-44c2-aba3-d86678a0d68d'
+      },
+      {
+        name: 'Fikri ve Sınai Mülkiyet Hakları',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'PVghbqvyVe'
+      },
+      {
+        name: 'Sosyal Medyada Yapay Zeka ile Dijital Pazarlama',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'AKkkf7kNJla'
+      },
+      {
+        name: 'Sosyal Medya İçerik Üretimi (Hedef Kitle Analizi ve Stratejik İletişim)',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'kJMMHbnypXg'
+      },
+      {
+        name: 'Sosyal Medyada Tasarım Temelli İçerik Üretimi',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'm688uk1ErWp'
+      },
+      {
+        name: 'Sosyal Medyada İçerik Üretim Süreci, Hikâye Anlatıcılığı ve Görsel Dil',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'xoBBUN4bLgn'
+      },
+      {
+        name: 'Hailuo Ai',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: '4qguek4NB9'
+      },
+      {
+        name: 'Anthropic Claude',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'bx1hLxXZOo'
+      },
+      {
+        name: 'ChatGPT',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'OKMhwBXgqW'
+      },
+      {
+        name: 'Manus AI',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'ZA1UrdE2Bj'
+      },
+      {
+        name: 'DeepSeek',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'lK1hwey4xw'
+      },
+      {
+        name: 'Custom GPTs',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2025',
+        credential_id: 'ax1hDzvgrE'
+      },
+      {
+        name: 'Yapay Zeka Zirvesi 2024',
+        issuer: 'Türkiye Girişimcilik Vakfı',
+        date: 'Ara 2024',
+        credential_id: 'G9LlUnWlq4X'
+      },
+"Nexus-TRL-LLM", "ANKA-LLM", "NeuroPaint", "LibraMind", "Open-Textile-Intelligence", "TRL-Bio-Compute", "Math2Code-A-Practical-Guide-for-Developers"],
+    "Siber Güvenlik": [
+      {
+        name: 'HACKATHON 2026',
+        issuer: 'Türkiye Girişimcilik Vakfı',
+        date: 'Mayıs 2026',
+        credential_id: 'yLpkCzE8OjE'
+      },
+      {
+        name: 'Mobil Güvenlik ve Sızma Teknikleri',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'lK1hwX9ELb'
+      },
+      {
+        name: 'Güvenlik Duvarına Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'OKMhw8EwMb'
+      },
+      {
+        name: 'Siber Vatan',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'DoS / DDoS Attacks and Protection',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'XV1hBdNpMv'
+      },
+"SIGINT", "cyber_security_btk_t3A", "Digital-Archaeology-Steganography-Vault", "TRL-Quantum-Edge", "TRL-Hardware-Pulse"],
     "Otonom Sistemler": ["Mars-Rover-Control-OS", "erc_rover_mission_control", "robotex_warrior_core", "teknofest_robotaksi", "teknofest_suru_iha", "teknofest_insansiz_kara_araci", "formula_student_autonomous_stack"],
     "Deniz & Su Teknolojileri": ["LionSight-AUV", "AQUASYNC-Multi-Domain-Autonomous-Maritime-System", "PoseidonEye", "teknofest_insansiz_deniz_araci", "denizalti-akademisi"],
     "Hava & Uzay Teknolojileri": ["teknofest_helikopter_tasarim", "teknofest_suru_iha", "Radiosonde-Hunting", "ktu-sarge-gokcen", "NOAA"],
@@ -740,6 +862,69 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
     }
   ],
   certificates: {
+    "Girişimcilik & İnovasyon": [
+      {
+        name: 'DATATHON 2026',
+        issuer: 'Türkiye Girişimcilik Vakfı',
+        date: 'Haziran 2026',
+        credential_id: 'Zj41irnr18v'
+      },
+      {
+        name: 'KOBİ’lerde Kurumsallaşma ve İstikrar İçin Markalaşma',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'da40a586-e522-4c2d-bdbd-fd64903e86fb Powered by'
+      },
+      {
+        name: "KOBİ'ler İçin Kalite Belgelendirme Süreçleri",
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'f06bba99-7efb-4ed8-bb54-8421de207149'
+      },
+      {
+        name: "KOBİ'lerin Yararlanabileceği Destekler",
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '6a8a393c-8c51-4bae-b8ed-729f4e2681f3'
+      },
+      {
+        name: 'Dış Ticaret',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '6ee13768-9902-4e99-940a-bc1eb52dc5ae Powered by'
+      },
+      {
+        name: 'KOBİ’lerin Bilgi ve İletişim Teknolojileri Deneyimleri',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'f75cc449-a64a-40f0-a499-e9eb4613c3be'
+      },
+      {
+        name: 'KOBİ’ler İçin Sanal Gerçeklik',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '3b6c9092-b762-486d-ad41-7f607a2627cd'
+      },
+      {
+        name: 'KOBİ’ler İçin Fikri Mülkiyet Hakları',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '6485390c-381b-4e78-aeec-634879114b74 Powered by'
+      },
+      {
+        name: 'E-Ticarete Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: '7rptZxE7ya'
+      },
+      {
+        name: 'Datathon 2025 Data Competition',
+        issuer: 'BTK Akademi',
+        date: 'Eyl 2025',
+        credential_id: 'bzAaiLLYxmy'
+      },
+    ],
+
     "Yapay Zeka & LLM": [
       {
         name: "Canva Magic Design",
@@ -854,6 +1039,205 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
     ],
     "Yazılım & Programlama": [
       {
+        name: 'HTML5 & CSS3 – Ders 3',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'ad616b65-53ef-4c5d-9b8f-00cd6cf1fa43'
+      },
+      {
+        name: 'HTML5 & CSS3 – Ders 2',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'b100b204-76e2-4968-a82a-8d8e4c9950c9'
+      },
+      {
+        name: 'HTML5 & CSS3 – Ders 1',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'a3e692f7-e470-47ad-85f6-a1af0bccf3af'
+      },
+      {
+        name: 'Web Tasarımının Temelleri HTML ve CSS',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'e4492f1b-9f9c-4291-bd36-1bc6dc72e30b'
+      },
+      {
+        name: 'Wordpress Kullanarak Web Sitesi Hazırlama',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '18e5f0bd-5721-46ed-8f12-e5c93e11634e'
+      },
+      {
+        name: 'Vitrin Tasarımı',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '89ad6ed9-3c6a-44bb-8027-7579afd594ac'
+      },
+      {
+        name: 'Python Programlama - 1',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '38c4e588-048f-4834-9f24-91bc413c9b2c'
+      },
+      {
+        name: 'Google Slaytlar İle Etkili Sunum Hazırlama',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'a46225b5-0c02-44cb-82c6-75f8416a57a1 Powered by'
+      },
+      {
+        name: 'Python Programlama - 2',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'ffba9a75-e00f-4041-aee2-3667594325d1'
+      },
+      {
+        name: 'CSS',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '9078c781-b170-433c-9087-e6af96cd5aaa Powered by'
+      },
+      {
+        name: 'HTML',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '2065904d-1057-4c69-b552-cd81e538fc51 Powered by'
+      },
+      {
+        name: 'Erişilebilir İş Yeri Tasarımı',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '77b1ca12-556e-4b36-8105-27aaaf7d00dd'
+      },
+      {
+        name: 'Robotik Programlama',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '9f46b3f5-5dc3-49b6-9435-999214405d89'
+      },
+      {
+        name: 'Javascript',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '00dee6f8-1e4c-44d6-9530-92a397c70bcc'
+      },
+      {
+        name: "Tasarım Odaklı Düşünme'ye Giriş",
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '65789142-d220-4067-b5b3-aa91c80e4d35'
+      },
+      {
+        name: 'Programlamanın Temelleri',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '0276249b-a986-4f67-be92-fc882e1468d5'
+      },
+      {
+        name: 'Eğitimde Oyunlaştırma ve Web 2.0 Araçları',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'L8dcn0rBP9'
+      },
+      {
+        name: 'Web Tabanlı Coğrafi Bilgi Sistemleri',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'dx1hlM8eWG'
+      },
+      {
+        name: 'Grafik Tasarıma Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'OKMhqvKqDj'
+      },
+      {
+        name: 'Web Sitesi Kullanılabilirliği',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'ZA1UM14oWD'
+      },
+      {
+        name: 'Google Dijital Pazarlama Temelleri',
+        issuer: 'Google',
+        date: 'Mar 2026',
+        credential_id: 'ax1hrE94bx'
+      },
+      {
+        name: 'Google Dijital Ebeveynlik',
+        issuer: 'Google',
+        date: 'Oca 2026',
+        credential_id: '4qgueLmn07'
+      },
+      {
+        name: 'Introduction to Artificial Intelligence and Algorithms',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2025',
+        credential_id: '6mqFNkwJxA'
+      },
+      {
+        name: 'Digital Literacy',
+        issuer: 'BTK Akademi',
+        date: 'Temmuz 2026',
+        credential_id: 'OKMhqeyObw'
+      },
+      {
+        name: 'Python 2',
+        issuer: 'BTK Akademi',
+        date: 'Temmuz 2026',
+        credential_id: 'dx1hAG0d1z'
+      },
+      {
+        name: 'Javascript Basics',
+        issuer: 'BTK Akademi',
+        date: 'Haziran 2026',
+        credential_id: 'gK2hoVBwj9'
+      },
+      {
+        name: 'C++',
+        issuer: 'BTK Akademi',
+        date: 'Haziran 2026',
+        credential_id: '6mqFNqLYdA'
+      },
+      {
+        name: 'Go',
+        issuer: 'BTK Akademi',
+        date: 'Haziran 2026',
+        credential_id: 'xr4t0Jeolm'
+      },
+      {
+        name: 'Python 1',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'Yx1hPL1mGY'
+      },
+      {
+        name: 'Version Control: Git and GitHub',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'NowfnNpDAz'
+      },
+      {
+        name: 'MicroBit Programming with MicroPython',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: '1kZCoxNdMM'
+      },
+      {
+        name: 'CSS Fundamentals',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2025',
+        credential_id: '7rptZAreZ1'
+      },
+      {
+        name: 'Web Development with HTML5',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2025',
+        credential_id: 'rKjhGyp8LJ'
+      },
+
+      {
         name: "Python 2 (Python Programlama Dili)",
         issuer: "BTK Akademi",
         date: "Temmuz 2025",
@@ -916,6 +1300,79 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
     ],
     "Donanım & Robotik": [
       {
+        name: 'İnsansız Hava Araçlarına Giriş Eğitimi - Katılım Sertifikası',
+        issuer: 'BTK Akademi',
+        date: 'Temmuz 2026',
+        credential_id: 'DVYGTrb0'
+      },
+      {
+        name: 'Havacılık Motorları Okulu',
+        issuer: 'TEI - TUSAŞ Motor Sanayii A.Ş.',
+        date: 'Haziran 2026',
+        credential_id: 'TEIHMO263721'
+      },
+      {
+        name: '3 Boyutlu Yazıcı Teknolojisine Giriş',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'b08b003f-50e0-4f79-a199-9d85cade4648'
+      },
+      {
+        name: '3 Boyutlu Yazıcıların Farklı Sektörlerde Kullanımı',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'b1a13948-40a1-4fda-8dd7-0736391023d1'
+      },
+      {
+        name: 'Raspberry Pi ile İleri Seviye',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'e204fb6e-f7f0-4c40-885a-52420fd8495b Powered by'
+      },
+      {
+        name: 'Arduino ile Mikrodenetleyiciler 2 (GirişÇıkış Arayüzleri)',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '4915324a-9e0d-45be-a381-370f50040b08'
+      },
+      {
+        name: 'Arduino ile Mikrodenetleyiciler 3 (Sensörden Veri Okuma)',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'a02aa4b3-ff7d-4359-9cbe-00bc4f4f44e6'
+      },
+      {
+        name: 'Arduino ile Mikrodenetleyicilere Giriş',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'ada8e3c4-6aa1-4ef7-9468-61c55038b01b'
+      },
+      {
+        name: 'Yeni Başlayanlar İçin Raspberry Pi',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'fc6a2f8b-029c-4aaf-80f6-5b7594e90aa8'
+      },
+      {
+        name: 'Arduino Programming with Tinkercad',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'BozfGwDZbx'
+      },
+      {
+        name: 'Introduction to Basic Electronics and Robotics',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: '1kZCozGVO7'
+      },
+      {
+        name: 'IHA - 1 - Sportif / Amatör',
+        issuer: 'Sivil Havacılık Genel Müdürlüğü',
+        date: 'Mar 2023',
+        credential_id: 'TR-IHA1H10609053'
+      },
+
+      {
         name: "İHA-1 Ticari/Sportif Pilot Sertifikası",
         issuer: "Sivil Havacılık Genel Müdürlüğü",
         date: "Mart 2023",
@@ -953,6 +1410,109 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
       },
     ],
     "Proje Yönetimi & İş": [
+      {
+        name: 'Proje Yönetimi Hakkında Temel Bilgiler',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '581745ed-d71c-4b14-b7a1-3d43724a4a09'
+      },
+      {
+        name: 'Proje Yönetimi Yazılımı - PROJECTLIBRE',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '5ebac33d-1054-4459-a83d-010e69775a4f Powered by'
+      },
+      {
+        name: 'Çevrim İçi Form Oluşturma',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'b9c90eb6-ac35-452a-90bb-999f3abd3ab0 Powered by'
+      },
+      {
+        name: 'Odoo (OpenERP) Entegre İş Yönetim Uygulaması',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '244eeb65-b2a9-4f30-bced-cc5092376d13 Powered by'
+      },
+      {
+        name: 'Şikayet Yönetimi',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '8fefbcd1-c76d-444b-8d0a-22b64eab404b'
+      },
+      {
+        name: 'Kurumlarda Stres Yönetimi',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '8e2b7e9f-ba74-489e-856e-dc0d1edf1e76'
+      },
+      {
+        name: 'Kişisel Stres Yönetimi',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '6488a577-e9fc-485b-829c-839d71c55f44'
+      },
+      {
+        name: 'Üretken Yapay Zekâ ile Sunum Hazırlama',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'BozfxNda6B'
+      },
+      {
+        name: 'Doküman Tipleri ve Veri Formatları',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'qKrheZWjeK'
+      },
+      {
+        name: '3-Karayolu Proje Çalışmaları',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'oJpSg49EYp'
+      },
+      {
+        name: 'Program ve Portföy Yönetimi',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'BozfGVqboj'
+      },
+      {
+        name: '2-Karayolu Projeleri Fizibilite Etütleri',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'Ko9fE0xM1J'
+      },
+      {
+        name: 'Proje Yönetimi',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'lK1hw74pZw'
+      },
+      {
+        name: 'Sosyal Medya Reklamcılığı ve Performans Analitiği',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'AKkkf7kwlrL'
+      },
+      {
+        name: 'Project Management Basics',
+        issuer: 'BTK Akademi',
+        date: 'Kas 2025',
+        credential_id: 'wmlFmJkB29'
+      },
+      {
+        name: 'Project and Risk Management',
+        issuer: 'BTK Akademi',
+        date: 'Haziran 2026',
+        credential_id: '8jmhLX7yMG'
+      },
+      {
+        name: 'Introduction to Information Technology',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'gK2hoD7Lqj'
+      },
+
       {
         name: "Proje Yönetim Temelleri",
         issuer: "BTK Akademi",
@@ -1029,6 +1589,979 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
       },
     ],
     "Kişisel Gelişim & Soft Skills": [
+      {
+        name: 'Fotoğrafçılık Teknikleri',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '49150268-21c9-4344-b367-4e68527b7571'
+      },
+      {
+        name: 'Yiyecek İçecek Servisi',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '7d1be7d6-69f3-4c1a-943f-f9eec417fba8'
+      },
+      {
+        name: 'İnovasyon',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'b99b5662-dd06-477e-b89b-bcb693cd11d3 Powered by'
+      },
+      {
+        name: 'İşe Alım Süreci',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '96547836-21cf-4d06-a1b3-58cc4679fd53'
+      },
+      {
+        name: 'GİRİŞİMCİLİK Göknur ATALAY',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '0a42b103-3f6b-4c2b-a9ac-4d524da87ff1'
+      },
+      {
+        name: 'GİRİŞİMCİLİK Nazlı AKYAY',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '53cc0f9c-1481-44fb-a9e6-1f63861e5135'
+      },
+      {
+        name: 'GİRİŞİMCİLİK Ayşe Kuyrukcu',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '4c4982fa-6abb-41b6-925c-d65ed8019582'
+      },
+      {
+        name: 'SOSYAL MEDYA',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '19897818-7319-4ca5-b9db-63d579b04551'
+      },
+      {
+        name: 'SATIŞ VE PAZARLAMA',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: ': b35223a5-5755-4776-b05b-6c6d3f070cf9'
+      },
+      {
+        name: 'HUKUKİ MEVZUAT Yiğit Gökçen',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '3468eb1e-b45b-472a-95f5-be5f7c175d30'
+      },
+      {
+        name: 'HUKUKİ MEVZUAT Çiğdem Çamurdan',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: 'ac639136-d72d-4d97-9bb6-6681fe94d394 Powered by'
+      },
+      {
+        name: 'DİJİTAL PAZARLAMA YÖNTEMLERİ',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: '5b889697-dd18-4ad2-960f-f62dd8f630c0'
+      },
+      {
+        name: 'BİLGİ GÜVENLİĞİ',
+        issuer: 'TBD TÜRKİYE BİLİŞİM DERNEĞİ',
+        date: 'Haziran 2026',
+        credential_id: 'f224f9b7-ce1e-4332-a54e-40115f18946e'
+      },
+      {
+        name: 'İş Yerinde Psikolojik Taciz (Mobbing)',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'fb35c3d6-37c7-4b28-8142-ebf8db9fcf05'
+      },
+      {
+        name: 'Ofiste Sağlıklı Yaşam',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'f048ca63-a61b-4457-aad2-aafb508e0aad'
+      },
+      {
+        name: 'İlk Yardım',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '633a4680-cbc2-4719-8f34-8790b65e40bf'
+      },
+      {
+        name: 'Dronelar ve Ticari Amaçlı Kullanımları',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '63a5b6cd-8829-4e1c-8e7a-0328518e9dc4'
+      },
+      {
+        name: 'Güneş Enerjisinden Yararlanma',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: '76b9e099-84cb-4ed7-9119-2036e41ae412'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Haziran 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Temel Elektronik',
+        issuer: 'Bilgeİş',
+        date: 'Haziran 2026',
+        credential_id: 'f0bda3dc-c410-4ff7-b699-9c3c9a161ff7'
+      },
+      {
+        name: 'Teknoloji ve Verimliliğin Anahtarı Yenilikçi Firmalar',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '05b9ff0f-5bf1-42b4-bd8f-789734134a67'
+      },
+      {
+        name: 'İnternette Güvenliğinizi Arttırın',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: 'b68d9857-fae2-4100-800d-a2f99c6b4a00'
+      },
+      {
+        name: 'İşiniz İçin Sosyal Medya',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '8c75eedb-cfde-434a-921b-6688970bb107'
+      },
+      {
+        name: 'Genel İş Sağlığı ve Güvenliği',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '0ea58e7a-b577-4708-9cc9-8288f876dba4'
+      },
+      {
+        name: 'Zor İnsanlarla Baş Etme',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: 'fa215315-706d-45d2-903c-fd667626a43d'
+      },
+      {
+        name: 'Liderlik',
+        issuer: 'Bilgeİş',
+        date: 'Mayıs 2026',
+        credential_id: '4f43acef-7ec0-48c0-a9ee-c67af2f10072 Powered by'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Uygulamalı Kaggle',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'nKqhnLg2Xk'
+      },
+      {
+        name: 'Bulut Bilişim Mimarileri',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: '8jmhNYGW1m'
+      },
+      {
+        name: 'Microsoft Word Temelleri',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'mKEhkdwO6L'
+      },
+      {
+        name: 'Adli Bilişime Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'dx1hla67nb'
+      },
+      {
+        name: 'Yazılım Geliştirme Araçları',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'jK1hKXNyYr'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Turkcell Geleceği Yazanlar',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Girişim Merkezi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Türk Dünyası Gençlik Vakfı',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'T3 Akademi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Ankara Üniversitesi Siyasal Bilgiler Fakültesi',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'aaG1FrnANKp'
+      },
+      {
+        name: 'Türk Dünyası Gençlik Vakfı',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: '2026_KTÜ6146132280674'
+      },
+      {
+        name: 'Bilgi Güvenliği Derneği',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Kamu İhale Kanunu',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'XV1hW1napx'
+      },
+      {
+        name: 'Bilgi Okuryazarlığı',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'm6oqskdgbJJ'
+      },
+      {
+        name: 'Dijital Okuryazarlık',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'w92KSm8LyqD'
+      },
+      {
+        name: 'Vatandaşlık Okuryazarlığı',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'N28vfnvx6yl'
+      },
+      {
+        name: 'Veri Okuryazarlığı',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'qEgjTeL4MVk'
+      },
+      {
+        name: 'Kültür Okuryazarlığı',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'YEmkT8mnMwK'
+      },
+      {
+        name: 'Sürdürülebilirlik Okuryazarlığı',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'eAxetO6aZeX'
+      },
+      {
+        name: 'KTÜ Yönetim Bilişim Sistemleri Kulübü',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Microsoft 365 Copilot ve Office Uygulamaları',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'MAZUEAVVxy'
+      },
+      {
+        name: 'Ford Otosan',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Nesnelerin İnterneti (IoT) ve Güvenliği',
+        issuer: 'BTK Akademi',
+        date: 'Nis 2026',
+        credential_id: 'XV1hWjGjJn'
+      },
+      {
+        name: 'Türkiye Uzay Ajansı',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Yapay Zekâ ile Görsel Sentez',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'D2xhE1Alml'
+      },
+      {
+        name: 'TS EN 50600 Veri Merkezi Tesisleri ve Altyapıları Standardı',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'mKEhkNWJ6X'
+      },
+      {
+        name: 'Sitescope ile Sistem İzleme',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'qKrheYWd01'
+      },
+      {
+        name: 'Bilgi Güvenliği Yönetim Sistemi',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: '4qgueLmnLY'
+      },
+      {
+        name: 'API ve API Testi',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: '4qguegXX7r'
+      },
+      {
+        name: 'SIEM Temelleri',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'gK2hakvzwK'
+      },
+      {
+        name: 'Telekomünikasyon Sistemleri Güvenliği',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'XV1hBdNm8l'
+      },
+      {
+        name: 'İnternet Alan Adları Hukuku',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'qKrheYWWE4'
+      },
+      {
+        name: '6-Karayolu Yapım Çalışmaları',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'zXztnmNe2o'
+      },
+      {
+        name: '8-Karayollarında Trafik Güvenliği Çalışmaları',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'L8dcNpnYyA'
+      },
+      {
+        name: '10-Özel ve Tarihi Köprüler',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'nKqhnWbmG7'
+      },
+      {
+        name: 'Uzaktan Erişim Araçları',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: '8jmhNZEEZZ'
+      },
+      {
+        name: 'Yapay Zekâ Hukuku',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'qKrheZ0lrM'
+      },
+      {
+        name: 'KVKK, GDPR Eğitim Seti',
+        issuer: 'BTK Akademi',
+        date: 'Mar 2026',
+        credential_id: 'WJ1SMLnmrd'
+      },
+      {
+        name: 'Sosyal Medya Uzmanlığına Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: '7rptZxEryp'
+      },
+      {
+        name: 'Makine Öğrenmesinin Matematiksel Temelleri',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'gK2halKOrV'
+      },
+      {
+        name: '4-Kamulaştırma Süreci',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'wmlFmB1rX4'
+      },
+      {
+        name: '9-Devlet ve İl Yollarında Bakım ve İşletme Sürecine Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: '6mqF01q9Yy'
+      },
+      {
+        name: '7-Yol Yapım, Bakım, Onarım Makine ve Ekipmanları',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'ZA1Ura7jgd'
+      },
+      {
+        name: '1-KGM Tarihçesi, Görev, Yetki ve Sorumlulukları',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'lK1hwkggAa'
+      },
+      {
+        name: '5-Malzeme Ocakları Yönetim Süreci',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'GoDfm64AA9'
+      },
+      {
+        name: 'Uluslararası İş Analizi Metodolojisi ve Teknikleri',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'L8dcNeAVPK'
+      },
+      {
+        name: '23 | Yirmi Üç',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: '1774b535-4b29-4c25-b11b-291d57f9b481'
+      },
+      {
+        name: 'Sosyal Medya ve İnternet Muhabirliği',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'XlOOsBKZW6Z'
+      },
+      {
+        name: 'Sosyal Medyada Marka İletişimi ve İşbirlikleri',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'VljjsgWkaKA'
+      },
+      {
+        name: 'Sosyal Medya Etkileyicilerinin Hukuki Sorumluluğu',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'xoBBUN4brZL'
+      },
+      {
+        name: 'Teknopark Ankara',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2026',
+        credential_id: 'jeqDhGDaZKq'
+      },
+      {
+        name: 'Başarı Sertifikası Articulate Storyline 360 ile İleri Seviye Etkileşimli İçerik Hazırlama',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'nwJltz89'
+      },
+      {
+        name: 'Türk Dünyası Gençlik Vakfı',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: '2025_KTÜ6146006461910'
+      },
+      {
+        name: 'Markaların Korunması',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'WJ1SMLlqMZ'
+      },
+      {
+        name: '23 | Yirmi Üç',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: '3c44f88d-1944-4919-b750-67f769f6e5ad'
+      },
+      {
+        name: 'HeyGen',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'WJ1SkN2p9n'
+      },
+      {
+        name: 'ElevenLabs',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: '8jmhNjXbP2'
+      },
+      {
+        name: 'Gemini Veo',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'oJpSgnayWO'
+      },
+      {
+        name: 'Finansal Piyasalara Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'Ko9fEG7WZG'
+      },
+      {
+        name: 'Üretken Yapay Zekâ ile Tercüme',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'OKMhwopAnN'
+      },
+      {
+        name: 'Veri Bilimi için Temel İstatistik',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'lK1h7n9And'
+      },
+      {
+        name: 'Matematik 101',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'yjahJpZVEB'
+      },
+      {
+        name: 'İnsan Haklarına Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'JoNf2pbD6z'
+      },
+      {
+        name: 'Uluslararası İlişkilerde Yapay Zekâ',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'pKmhqp2DYG'
+      },
+      {
+        name: 'NotebookLM',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: '8jmhNZeyk6'
+      },
+      {
+        name: 'KTUGEMDTEK (KTÜ Gemi İnşaatı ve Deniz Teknolojileri Kulübü)',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Yapay Zekâ Dünyasına Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: '7rptPBld1p'
+      },
+      {
+        name: 'Perplexit',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'Ko9fE4NpKx'
+      },
+      {
+        name: 'Canva Magic Desing',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'ZA1UrdEkWO'
+      },
+      {
+        name: 'Gamma',
+        issuer: 'BTK Akademi',
+        date: 'Oca 2026',
+        credential_id: 'GoDfm1rwNr'
+      },
+      {
+        name: 'KTÜ İşletme ve Ekonomi Kulübü',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Certificate of Achievement – Use of Artificial Intelligence in Multimedia Data Security Workshop',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'WzBbI9py'
+      },
+      {
+        name: 'Social Engineering and Phishing',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'WJ1SkZbe4d'
+      },
+      {
+        name: 'T3 Vakfı',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'TÜBİTAK',
+        issuer: 'BTK Akademi',
+        date: 'Kas 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Artificial Intelligence Ethics',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2025',
+        credential_id: 'MAZUE7xX2D'
+      },
+      {
+        name: 'Use of Generative Artificial Intelligence in Research',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2025',
+        credential_id: 'D2xhEEKoYN'
+      },
+      {
+        name: 'Introduction to Generative Artificial Intelligence',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2025',
+        credential_id: 'eK1hOjmKgG'
+      },
+      {
+        name: 'Gençlik ve Spor Bakanlığı',
+        issuer: 'BTK Akademi',
+        date: 'Ağu 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'GDG Trabzon',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Fundamentals of Cryptography',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'kK1hVD09dy'
+      },
+      {
+        name: 'Introduction to Cybersecurity',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'XV1hWEow9j'
+      },
+      {
+        name: 'Karadeniz Teknik Üniversitesi Yazılım Kulübü',
+        issuer: 'BTK Akademi',
+        date: 'Mayıs 2026',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Financial Literacy',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2024',
+        credential_id: 'AJaSdLzWW1'
+      },
+      {
+        name: 'Karadeniz Teknik Üniversitesi Endüstri Mühendisliği Kulübü',
+        issuer: 'BTK Akademi',
+        date: 'Şub 2025',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Gençlik ve Spor Bakanlığı',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2024',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'GDG Trabzon',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2024',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'KTU Artificial Intelligence Society',
+        issuer: 'BTK Akademi',
+        date: 'Ara 2024',
+        credential_id: 'CERT-2026'
+      },
+      {
+        name: 'Small Basic',
+        issuer: 'BTK Akademi',
+        date: 'Kas 2024',
+        credential_id: '9Xrtq18yXl'
+      },
+      {
+        name: 'Persuasion Skills',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'pKmhKr9Xxj'
+      },
+      {
+        name: 'Effective Communication Strategies',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'vpWc8Mb1Ao'
+      },
+      {
+        name: 'Public Speaking and Presentation Techniques',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'GoDfn0V2xB'
+      },
+      {
+        name: 'Introduction to Artificial Intelligence',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'zXztak2EeO'
+      },
+      {
+        name: 'İşletim Sistemlerine Giriş',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: '7rptZxqGKp'
+      },
+      {
+        name: 'Circuit Design with Proteus',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'ax1hDAjV9N'
+      },
+      {
+        name: 'Fundamentals of Entrepreneurship',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'XV1hWEv6VY'
+      },
+      {
+        name: 'Communication and Network Management',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'yjahJpaPNz'
+      },
+      {
+        name: 'Presentation Techniques',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'zXztak2MEd'
+      },
+      {
+        name: 'Problem Solving Techniques',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'zXztak7gdZ'
+      },
+      {
+        name: 'Team Building and Management',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: '7rptZxqG9P'
+      },
+      {
+        name: 'C Programming Language',
+        issuer: 'BTK Akademi',
+        date: 'Eki 2024',
+        credential_id: 'GoDfn444BW'
+      },
+
       {
         name: "Etkili İletişim Stratejileri",
         issuer: "BTK Akademi",
