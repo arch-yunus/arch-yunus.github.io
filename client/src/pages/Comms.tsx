@@ -1,148 +1,46 @@
-
+import { CheckCircle2, Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 import { profileData } from "@/lib/data";
-import { Radio, Mail, Linkedin, Github, MapPin, Send, ShieldCheck, Fingerprint, Lock } from "lucide-react";
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useCyberSound } from "@/hooks/use-cyber-sound";
+
+const email = "bahattinyunuscetin@hotmail.com";
 
 export default function Comms() {
-    const [status, setStatus] = useState<'idle' | 'scanning' | 'transmitting' | 'sent'>('idle');
-    const { playSound } = useCyberSound();
+  const [sent, setSent] = useState(false);
 
-    const handlePing = (e: React.FormEvent) => {
-        e.preventDefault();
-        playSound('access');
-        setStatus('scanning');
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const subject = encodeURIComponent(String(form.get("subject") || "Yeni proje fikri"));
+    const body = encodeURIComponent(`Merhaba Bahattin,\n\n${String(form.get("message") || "")}`);
+    setSent(true);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
 
-        // Scan Sequence
-        setTimeout(() => {
-            playSound('alert');
-            setStatus('transmitting');
+  return (
+    <div className="space-y-12 pb-12">
+      <header className="max-w-3xl"><div className="section-eyebrow">Bağlantı kuralım</div><h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">İletişim</h1><p className="mt-5 max-w-2xl text-base leading-8 text-white/55 md:text-lg">Bir fikir, iş birliği ya da sadece teknoloji üzerine iyi bir sohbet için bana yazabilirsiniz.</p></header>
 
-            // Transmit Sequence
-            setTimeout(() => {
-                playSound('click');
-                setStatus('sent');
-                setTimeout(() => setStatus('idle'), 5000);
-            }, 2000);
-        }, 1500);
-    }
+      <div className="grid gap-6 lg:grid-cols-[.78fr_1.22fr]">
+        <aside className="rounded-2xl border border-white/10 bg-white/[.035] p-7">
+          <h2 className="text-2xl font-semibold">Doğrudan ulaş</h2>
+          <p className="mt-3 text-sm leading-6 text-white/50">En hızlı dönüş için e-posta veya LinkedIn üzerinden yazabilirsiniz.</p>
+          <div className="mt-7 space-y-3">
+            <a href={`mailto:${email}`} className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/10 p-4 transition hover:border-[#b9f36b]/40"><span className="grid h-10 w-10 place-items-center rounded-lg bg-[#b9f36b]/10 text-[#b9f36b]"><Mail size={18} /></span><span><strong className="block text-sm text-white">E-posta</strong><small className="mt-1 block text-xs text-white/45">{email}</small></span></a>
+            <a href={profileData.personal.linkedin_url} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/10 p-4 transition hover:border-[#b9f36b]/40"><span className="grid h-10 w-10 place-items-center rounded-lg bg-[#b9f36b]/10 text-[#b9f36b]"><Linkedin size={18} /></span><span><strong className="block text-sm text-white">LinkedIn</strong><small className="mt-1 block text-xs text-white/45">Profesyonel ağım</small></span></a>
+            <a href={profileData.personal.github_url} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/10 p-4 transition hover:border-[#b9f36b]/40"><span className="grid h-10 w-10 place-items-center rounded-lg bg-[#b9f36b]/10 text-[#b9f36b]"><Github size={18} /></span><span><strong className="block text-sm text-white">GitHub</strong><small className="mt-1 block text-xs text-white/45">Açık kaynak çalışmalarım</small></span></a>
+          </div>
+          <div className="mt-7 flex items-center gap-2 border-t border-white/10 pt-5 text-xs text-white/40"><MapPin size={14} className="text-[#b9f36b]" /> Türkiye · Uzaktan çalışmaya açık</div>
+        </aside>
 
-    return (
-        <div className="max-w-4xl mx-auto space-y-12">
-            <div className="flex items-center gap-4 mb-8 border-b border-white/10 pb-6">
-                <Radio className="w-8 h-8 text-neon-blue animate-pulse" />
-                <h2 className="text-3xl font-[family-name:var(--font-display)] tracking-wider">
-                    COMMS <span className="text-neon-blue">//</span> ESTABLISH UPLINK
-                </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                    <div className="p-6 bg-white/5 border border-white/10 border-l-4 border-l-neon-blue">
-                        <h3 className="text-xl font-bold font-[family-name:var(--font-display)] mb-4 text-white">DIRECT CHANNELS</h3>
-                        <div className="space-y-6">
-                            <a href={profileData.personal.linkedin_url} target="_blank" className="flex items-center gap-4 group p-3 hover:bg-white/5 rounded transition-all">
-                                <div className="w-10 h-10 bg-blue-900/30 flex items-center justify-center rounded border border-blue-500/30 group-hover:border-blue-400 group-hover:bg-blue-900/50 transition-all">
-                                    <Linkedin className="w-5 h-5 text-blue-400" />
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-white group-hover:text-blue-400">LINKEDIN</div>
-                                    <div className="text-xs text-white/50 font-mono">Professional Network</div>
-                                </div>
-                            </a>
-
-                            <a href={profileData.personal.github_url} target="_blank" className="flex items-center gap-4 group p-3 hover:bg-white/5 rounded transition-all">
-                                <div className="w-10 h-10 bg-white/5 flex items-center justify-center rounded border border-white/10 group-hover:border-white/30 transition-all">
-                                    <Github className="w-5 h-5 text-white" />
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-white group-hover:text-neon-blue">GITHUB</div>
-                                    <div className="text-xs text-white/50 font-mono">Code Repositories</div>
-                                </div>
-                            </a>
-
-                            <div className="flex items-center gap-4 p-3 rounded">
-                                <div className="w-10 h-10 bg-neon-green/10 flex items-center justify-center rounded border border-neon-green/30">
-                                    <MapPin className="w-5 h-5 text-neon-green" />
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-white font-mono">COORDINATES</div>
-                                    <div className="text-xs text-white/50 font-mono">{profileData.personal.location}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="font-mono text-xs text-white/30 p-4 border border-white/5 bg-black">
-                        <p>ENCRYPTION: AES-256</p>
-                        <p>STATUS: SECURE</p>
-                        <p>LATENCY: 12ms</p>
-                    </div>
-                </div>
-
-                <div>
-                    <form onSubmit={handlePing} className="space-y-4 bg-black/40 p-8 border border-white/10 cyber-clip-tl">
-                        <h3 className="text-lg font-bold font-[family-name:var(--font-display)] mb-6 text-white">TRANSMIT MESSAGE</h3>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-mono text-neon-blue">UID (NAME)</label>
-                            <input type="text" className="w-full bg-black border border-white/20 p-3 text-white focus:border-neon-blue focus:outline-none font-mono text-sm" placeholder="Enter identification..." required />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-mono text-neon-blue">FREQUENCY (EMAIL)</label>
-                            <input type="email" className="w-full bg-black border border-white/20 p-3 text-white focus:border-neon-blue focus:outline-none font-mono text-sm" placeholder="Enter return frequency..." required />
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-mono text-neon-blue">PAYLOAD (MESSAGE)</label>
-                            <textarea className="w-full bg-black border border-white/20 p-3 text-white focus:border-neon-blue focus:outline-none font-mono text-sm h-32" placeholder="Enter encrypted data..." required />
-                        </div>
-
-                        <button
-                            disabled={status !== 'idle'}
-                            className={`
-                        w-full py-4 font-bold font-[family-name:var(--font-display)] tracking-widest flex items-center justify-center gap-2 transition-all relative overflow-hidden
-                        ${status === 'sent' ? 'bg-neon-green text-black' : 'bg-neon-blue text-black hover:bg-white hover:text-black'}
-                        ${status !== 'idle' ? 'cursor-wait opacity-80' : ''}
-                    `}
-                        >
-                            <AnimatePresence mode="wait">
-                                {status === 'idle' && (
-                                    <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                                        INITIATE UPLINK <Send className="w-4 h-4" />
-                                    </motion.div>
-                                )}
-                                {status === 'scanning' && (
-                                    <motion.div key="scanning" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                                        <Fingerprint className="w-4 h-4 animate-pulse" /> SCANNING_BIOMETRICS...
-                                    </motion.div>
-                                )}
-                                {status === 'transmitting' && (
-                                    <motion.div key="transmitting" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                                        <Lock className="w-4 h-4 animate-spin" /> ENCRYPTING_PAYLOAD...
-                                    </motion.div>
-                                )}
-                                {status === 'sent' && (
-                                    <motion.div key="sent" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                                        <ShieldCheck className="w-4 h-4" /> TRANSMISSION COMPLETE
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-
-                            {/* Scanning bar effect during scan */}
-                            {status === 'scanning' && (
-                                <motion.div
-                                    className="absolute inset-x-0 h-1 bg-white/50 z-10"
-                                    animate={{ top: ['0%', '100%', '0%'] }}
-                                    transition={{ duration: 0.5, repeat: Infinity }}
-                                />
-                            )}
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    );
+        <form onSubmit={handleSubmit} className="rounded-2xl border border-white/10 bg-white/[.035] p-7 md:p-9">
+          <div className="flex items-start justify-between gap-4"><div><h2 className="text-2xl font-semibold">Bir mesaj bırak</h2><p className="mt-2 text-sm text-white/45">Mesajın cihazındaki e-posta uygulamasında hazırlanır.</p></div><Send className="mt-1 text-[#b9f36b]" size={20} /></div>
+          <div className="mt-8 grid gap-5">
+            <label className="grid gap-2 text-xs font-semibold uppercase tracking-[.12em] text-white/45">Konu<input name="subject" required placeholder="Nasıl birlikte çalışabiliriz?" className="rounded-xl border border-white/12 bg-black/15 px-4 py-3 text-sm font-normal normal-case tracking-normal text-white outline-none transition placeholder:text-white/25 focus:border-[#b9f36b]/50" /></label>
+            <label className="grid gap-2 text-xs font-semibold uppercase tracking-[.12em] text-white/45">Mesajın<textarea name="message" required rows={7} placeholder="Fikrinden, probleminden veya projenin bağlamından bahset..." className="resize-y rounded-xl border border-white/12 bg-black/15 px-4 py-3 text-sm font-normal normal-case tracking-normal text-white outline-none transition placeholder:text-white/25 focus:border-[#b9f36b]/50" /></label>
+          </div>
+          <button type="submit" className="button-primary mt-6">{sent ? <>E-posta hazır <CheckCircle2 size={16} /></> : <>Mesajı hazırla <Send size={15} /></>}</button>
+        </form>
+      </div>
+    </div>
+  );
 }

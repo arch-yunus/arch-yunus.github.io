@@ -1,120 +1,62 @@
-
-import { useRoute, Link } from "wouter";
-import { profileData } from "@/lib/data";
+import { ArrowLeft, ArrowUpRight, Github, Layers, ShieldCheck, Terminal } from "lucide-react";
+import { Link, useRoute } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Zap, Shield, Cpu, Layers, Lock, Activity } from "lucide-react";
-import { SecureLock, useClearance } from "@/components/cyber-ui/SecurityClearance";
-import { useEffect } from "react";
-import { useCyberSound } from "@/hooks/use-cyber-sound";
+import { profileData } from "@/lib/data";
 
 export default function ProjectDetail() {
-    const [, params] = useRoute("/operations/:projectId");
-    const project = profileData.featured_projects.find(p => p.name.toLowerCase() === params?.projectId?.toLowerCase());
-    const { incrementClearance } = useClearance();
-    const { playSound } = useCyberSound();
+  const [, params] = useRoute("/operations/:projectId");
+  const project = profileData.featured_projects.find((item) => item.name.toLowerCase() === params?.projectId?.toLowerCase());
 
-    useEffect(() => {
-        if (project) {
-            incrementClearance(1);
-            playSound('scan');
-        }
-    }, [params?.projectId]);
-
-    if (!project) return (
-        <div className="text-center py-20">
-            <h1 className="text-2xl text-white font-mono">PROJECT_NOT_FOUND</h1>
-            <Link href="/operations" className="text-neon-blue hover:underline mt-4 inline-block font-mono">RETURN_TO_BASE</Link>
-        </div>
-    );
-
+  if (!project) {
     return (
-        <div className="space-y-12 pb-20">
-            <Link href="/operations" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-mono text-sm group">
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> BACK_TO_OPERATIONS
-            </Link>
-
-            <header className="grid md:grid-cols-2 gap-12 items-end">
-                <div className="space-y-6">
-                    <div className="flex items-center gap-3">
-                        <span className="px-3 py-1 bg-neon-blue/10 border border-neon-blue/30 text-neon-blue text-[10px] font-mono">
-                            ACTIVE_MISSION // {project.language.toUpperCase()}
-                        </span>
-                    </div>
-                    <h1 className="text-5xl md:text-7xl font-[family-name:var(--font-display)] font-bold text-white tracking-tighter">
-                        {project.name.toUpperCase()}
-                    </h1>
-                    <p className="text-xl text-white/60 font-mono leading-relaxed">
-                        {project.description}
-                    </p>
-                </div>
-
-                <div className="relative group overflow-hidden border border-white/10 cyber-clip-br">
-                    <img src={project.image} alt={project.name} className="w-full aspect-video object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                </div>
-            </header>
-
-            <div className="grid lg:grid-cols-3 gap-12">
-                <div className="lg:col-span-2 space-y-12">
-                    {/* Architecture Section */}
-                    <section className="p-8 bg-white/5 border border-white/10 cyber-clip-tl space-y-8">
-                        <h2 className="text-2xl font-[family-name:var(--font-display)] text-white flex items-center gap-3">
-                            <Layers className="w-6 h-6 text-neon-blue" /> SYSTEM_ARCHITECTURE
-                        </h2>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="space-y-4">
-                                <h3 className="text-sm font-mono text-neon-blue">TECH_STACK</h3>
-                                <ul className="space-y-2">
-                                    {(project.architecture || ['Modular Kernel', 'Neural Processing Unit', 'Distributed Database', 'End-to-End Encryption']).map(item => (
-                                        <li key={item} className="flex items-center gap-2 text-xs text-white/50 font-mono">
-                                            <Zap className="w-3 h-3 text-neon-green" /> {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <SecureLock level={3}>
-                                <div className="space-y-4">
-                                    <h3 className="text-sm font-mono text-neon-green">SECURITY_PROTOCOLS</h3>
-                                    <ul className="space-y-2">
-                                        {(project.security || ['Zero Trust Architecture', 'Anomaly Detection', 'Hardware-level Security', 'Real-time Monitoring']).map(item => (
-                                            <li key={item} className="flex items-center gap-2 text-xs text-white/50 font-mono">
-                                                <Shield className="w-3 h-3 text-neon-red" /> {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </SecureLock>
-                        </div>
-                    </section>
-                </div>
-
-                <aside className="space-y-8">
-                    <div className="p-8 bg-black/40 border border-white/10 cyber-clip-br space-y-6">
-                        <h3 className="text-lg font-[family-name:var(--font-display)] text-white">MISSION_CONTROL</h3>
-                        <div className="space-y-4">
-                            <a href={project.url} target="_blank" className="w-full py-4 bg-neon-blue text-black font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-white transition-all flex items-center justify-center gap-2">
-                                GITHUB_REPOSITORY <Github className="w-4 h-4" />
-                            </a>
-                            <button className="w-full py-4 border border-white/20 text-white font-mono tracking-wider hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                                LIVE_DEMO <ExternalLink className="w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="p-6 border border-dashed border-white/10 rounded-lg">
-                        <div className="flex items-center gap-2 text-[10px] font-mono text-white/30 mb-2">
-                            <Cpu className="w-3 h-3" /> NODE_STATUS
-                        </div>
-                        <div className="flex justify-between items-end">
-                            <div className="space-y-1">
-                                <div className="text-xs text-white/50 font-mono">STABILITY</div>
-                                <div className="text-xl font-bold text-white uppercase">OPTIMAL</div>
-                            </div>
-                            <div className="text-neon-green font-mono text-xs">99.8%</div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-        </div>
+      <div className="mx-auto max-w-xl py-24 text-center">
+        <div className="section-eyebrow justify-center">Kayıt bulunamadı</div>
+        <h1 className="mt-5 text-4xl font-semibold">Bu proje burada yok.</h1>
+        <Link href="/operations" className="button-primary mt-8">Projeler sayfasına dön <ArrowLeft size={16} /></Link>
+      </div>
     );
+  }
+
+  const architecture = project.architecture || ["Modüler yapı", "Veri işleme katmanı", "Otomasyon akışları", "Dokümante API"];
+  const security = project.security || ["Güvenli varsayılanlar", "Girdi doğrulama", "İzlenebilirlik", "Sürekli iyileştirme"];
+
+  return (
+    <div className="space-y-12 pb-12">
+      <Link href="/operations" className="inline-flex items-center gap-2 text-sm text-white/45 transition hover:text-[#b9f36b]"><ArrowLeft size={16} /> Projelere dön</Link>
+
+      <header className="grid items-end gap-10 lg:grid-cols-[1fr_1fr]">
+        <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}>
+          <div className="section-eyebrow">{project.language} · Açık kaynak proje</div>
+          <h1 className="mt-5 text-5xl font-semibold leading-[.98] tracking-tight md:text-7xl">{project.name}</h1>
+          <p className="mt-6 max-w-xl text-lg leading-8 text-white/55">{project.description}</p>
+          <div className="hero-actions">
+            <a href={project.url} target="_blank" rel="noreferrer" className="button-primary">GitHub'da incele <Github size={16} /></a>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 font-mono text-xs text-white/45"><span className="h-2 w-2 rounded-full bg-[#b9f36b]" /> Aktif kayıt</span>
+          </div>
+        </motion.div>
+        <motion.div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[.04]" initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: .08 }}>
+          <img src={project.image} alt={project.name} className="aspect-video h-full w-full object-cover opacity-85" />
+        </motion.div>
+      </header>
+
+      <div className="grid gap-5 lg:grid-cols-3">
+        <section className="rounded-2xl border border-white/10 bg-white/[.035] p-7 lg:col-span-2">
+          <div className="flex items-center gap-3"><Layers size={19} className="text-[#b9f36b]" /><h2 className="text-2xl font-semibold">Nasıl çalışıyor?</h2></div>
+          <div className="mt-7 grid gap-8 md:grid-cols-2">
+            <div><h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-white/45"><Terminal size={14} /> Teknik yapı</h3><ul className="mt-4 space-y-3">{architecture.map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-white/60"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b9f36b]" />{item}</li>)}</ul></div>
+            <div><h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-white/45"><ShieldCheck size={14} /> Kalite yaklaşımı</h3><ul className="mt-4 space-y-3">{security.map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-white/60"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f08a7e]" />{item}</li>)}</ul></div>
+          </div>
+        </section>
+        <aside className="rounded-2xl border border-white/10 bg-[#b9f36b]/[.06] p-7">
+          <h2 className="text-xl font-semibold">Proje özeti</h2>
+          <dl className="mt-6 space-y-5 text-sm">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4"><dt className="text-white/45">Dil</dt><dd className="font-mono text-[#b9f36b]">{project.language}</dd></div>
+            <div className="flex items-center justify-between border-b border-white/10 pb-4"><dt className="text-white/45">Yıldız</dt><dd className="font-mono text-white">{project.stars}</dd></div>
+            <div className="flex items-center justify-between border-b border-white/10 pb-4"><dt className="text-white/45">Fork</dt><dd className="font-mono text-white">{project.forks}</dd></div>
+          </dl>
+          <a href={project.url} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#b9f36b] hover:text-white">Kaynak koduna git <ArrowUpRight size={15} /></a>
+        </aside>
+      </div>
+    </div>
+  );
 }

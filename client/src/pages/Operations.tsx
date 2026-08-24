@@ -1,108 +1,83 @@
-
-// @ts-nocheck
-import { profileData } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Target, ExternalLink, Info } from "lucide-react";
-import { useState } from "react";
-import { ProjectModal } from "@/components/cyber-ui/ProjectModal";
-import { useCyberSound } from "@/hooks/use-cyber-sound";
-import { MissionLogs } from "@/components/cyber-ui/MissionLogs";
+import { ArrowUpRight, ExternalLink, Filter, GitFork, Star } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Link } from "wouter";
+import { profileData } from "@/lib/data";
+
+const filters = ["Hepsi", "Yapay zekâ", "Siber güvenlik", "Robotik", "Web & araçlar"];
+
+const filterMatchers: Record<string, RegExp> = {
+  "Yapay zekâ": /ai|antenna|poseidon|neuro|libramind|llm|zeka|deep|model|paint|math/i,
+  "Siber güvenlik": /cyber|security|prison|btk|hack|siber/i,
+  Robotik: /robot|autonomous|iha|auv|neptune|deniz|cizgi|sürü|ika/i,
+  "Web & araçlar": /route|dev|university|milli|noaa|meta|tool|engineer/i,
+};
 
 export default function Operations() {
-    const [filter, setFilter] = useState<string | null>(null);
-    const [selectedProject, setSelectedProject] = useState<any | null>(null);
-    const { playSound } = useCyberSound();
+  const [filter, setFilter] = useState("Hepsi");
+  const projects = useMemo(() => {
+    if (filter === "Hepsi") return profileData.featured_projects;
+    const matcher = filterMatchers[filter];
+    return profileData.featured_projects.filter((project) => matcher.test(`${project.name} ${project.description}`));
+  }, [filter]);
 
-    const categories = Object.keys(profileData.categories);
+  return (
+    <div className="space-y-10 pb-12">
+      <header className="max-w-3xl">
+        <div className="section-eyebrow">Seçilmiş işler</div>
+        <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">Projeler</h1>
+        <p className="mt-5 max-w-2xl text-base leading-8 text-white/55 md:text-lg">
+          Yapay zekâ, optimizasyon ve güvenlik ekseninde geliştirdiğim açık kaynak çalışmalar. Her proje, bir soruyu daha iyi çözme denemesi.
+        </p>
+      </header>
 
-    const filteredProjects = filter
-        ? profileData.featured_projects.filter(p => profileData.categories[filter as keyof typeof profileData.categories]?.includes(p.name))
-        : profileData.featured_projects;
+      <div className="flex flex-wrap items-center gap-2 border-y border-white/10 py-4">
+        <div className="mr-2 flex items-center gap-2 text-xs text-white/40"><Filter size={14} /> Filtrele</div>
+        {filters.map((item) => (
+          <button
+            key={item}
+            type="button"
+            onClick={() => setFilter(item)}
+            className={`rounded-full border px-4 py-2 text-xs transition ${filter === item ? "border-[#b9f36b] bg-[#b9f36b] text-[#0b0d0f]" : "border-white/12 bg-white/[.03] text-white/55 hover:border-white/30 hover:text-white"}`}
+          >
+            {item}
+          </button>
+        ))}
+        <span className="ml-auto text-xs text-white/35">{projects.length} proje</span>
+      </div>
 
-    return (
-        <div className="space-y-8 pb-12">
-            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/10">
-                <div className="flex items-center gap-4">
-                    <Target className="w-8 h-8 text-neon-green animate-pulse" />
-                    <h2 className="text-3xl font-[family-name:var(--font-display)] tracking-wider">
-                        OPERATIONS <span className="text-neon-green">//</span> PROJECT LOGS
-                    </h2>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                    <button
-                        onClick={() => setFilter(null)}
-                        className={`px-3 py-1 text-xs font-mono border ${filter === null ? 'border-neon-green text-neon-green bg-neon-green/10' : 'border-white/20 text-white/60 hover:border-white/40'} transition-all`}
-                    >
-                        ALL_SYSTEMS
-                    </button>
-                    {categories.slice(0, 5).map(cat => (
-                        <button
-                            key={cat}
-                            onClick={() => setFilter(cat)}
-                            className={`px-3 py-1 text-xs font-mono border ${filter === cat ? 'border-neon-green text-neon-green bg-neon-green/10' : 'border-white/20 text-white/60 hover:border-white/40'} transition-all`}
-                        >
-                            {cat.toUpperCase().replace(/ /g, '_')}
-                        </button>
-                    ))}
-                </div>
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.name}
+            className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[.035] transition hover:-translate-y-1 hover:border-[#b9f36b]/45 hover:bg-[#b9f36b]/[.045]"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .15 }}
+            transition={{ duration: .4, delay: Math.min(index * .035, .22) }}
+          >
+            <div className="relative h-48 overflow-hidden bg-[#19201d]">
+              <img src={project.image} alt={project.name} className="h-full w-full object-cover opacity-75 grayscale transition duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d0f] via-transparent to-transparent" />
+              <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-[#0b0d0f]/70 px-3 py-1 font-mono text-[10px] text-[#b9f36b] backdrop-blur">{project.language}</span>
+              <span className="absolute bottom-4 right-4 font-mono text-[10px] text-white/40">{String(index + 1).padStart(2, "0")}</span>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredProjects.map((project, i) => (
-                    <Link
-                        key={i}
-                        href={`/operations/${project.name.toLowerCase()}`}
-                        className="group relative h-full cursor-pointer"
-                    >
-                        {/* Cyber Card Container */}
-                        <div
-                            onClick={() => playSound('click')}
-                            className="h-full bg-black/40 border border-white/10 group-hover:border-neon-blue/50 group-hover:shadow-[0_0_20px_rgba(0,243,255,0.2)] transition-all duration-300 flex flex-col cyber-clip-br"
-                        >
-                            <div className="relative h-48 overflow-hidden">
-                                <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-                                <div className="absolute top-2 right-2 px-2 py-1 bg-black/80 border border-white/20 text-[10px] font-mono text-neon-blue backdrop-blur-sm">
-                                    {project.language}
-                                </div>
-                            </div>
-
-                            <div className="p-6 flex-1 flex flex-col">
-                                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold mb-2 text-white group-hover:text-neon-blue transition-colors">
-                                    {project.name}
-                                </h3>
-                                <p className="text-sm text-white/60 mb-6 flex-1 line-clamp-3 font-mono">
-                                    {project.description}
-                                </p>
-
-                                <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs font-mono">
-                                    <div className="flex gap-3 text-white/40">
-                                        <span>★ {project.stars}</span>
-                                        <span>⑂ {project.forks}</span>
-                                    </div>
-                                    <a
-                                        href={project.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-1 text-neon-blue hover:text-white transition-colors"
-                                    >
-                                        SOURCE <ExternalLink className="w-3 h-3" />
-                                    </a>
-                                    <button
-                                        className="flex items-center gap-1 text-neon-green/60 hover:text-neon-green transition-colors"
-                                    >
-                                        INTEL <Info className="w-3 h-3" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                ))}
+            <div className="flex flex-1 flex-col p-5">
+              <h2 className="text-xl font-semibold text-white group-hover:text-[#b9f36b]">{project.name}</h2>
+              <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/50">{project.description}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/35">
+                <div className="flex gap-3"><span className="inline-flex items-center gap-1"><Star size={13} /> {project.stars}</span><span className="inline-flex items-center gap-1"><GitFork size={13} /> {project.forks}</span></div>
+                <div className="flex items-center gap-3">
+                  <Link href={`/operations/${project.name.toLowerCase()}`} className="inline-flex items-center gap-1 text-white/65 hover:text-[#b9f36b]">Detay <ArrowUpRight size={13} /></Link>
+                  <a href={project.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-white/65 hover:text-[#b9f36b]" aria-label={`${project.name} GitHub`}>Kaynak <ExternalLink size={13} /></a>
+                </div>
+              </div>
             </div>
+          </motion.article>
+        ))}
+      </div>
 
-            <MissionLogs />
-        </div>
-    );
+      {projects.length === 0 && <div className="rounded-2xl border border-dashed border-white/15 p-12 text-center text-white/45">Bu filtrede henüz proje görünmüyor.</div>}
+    </div>
+  );
 }

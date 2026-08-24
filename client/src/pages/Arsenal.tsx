@@ -1,58 +1,49 @@
-// @ts-nocheck
-import { profileData } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Cpu, Terminal, Shield } from "lucide-react";
-import { useVault } from "@/contexts/VaultContext";
-import { SkillHexGrid } from "@/components/cyber-ui/SkillHexGrid";
+import { BrainCircuit, Code2, Container, ShieldCheck, Wrench } from "lucide-react";
+import { profileData } from "@/lib/data";
+
+const groups = [
+  { title: "Yapay zekâ & makine öğrenmesi", icon: BrainCircuit, color: "#b9f36b", items: profileData.ai_tools.map((item) => item.name) },
+  { title: "Diller", icon: Code2, color: "#f08a7e", items: profileData.skills.languages },
+  { title: "Framework & kütüphaneler", icon: Container, color: "#b9f36b", items: profileData.skills.frameworks },
+  { title: "Araçlar & altyapı", icon: Wrench, color: "#f08a7e", items: profileData.skills.tools },
+];
 
 export default function Arsenal() {
-    const { isSecureMode } = useVault();
+  return (
+    <div className="space-y-12 pb-12">
+      <header className="max-w-3xl">
+        <div className="section-eyebrow">Araç kutum</div>
+        <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">Yetenekler</h1>
+        <p className="mt-5 max-w-2xl text-base leading-8 text-white/55 md:text-lg">Bir teknoloji listesinden fazlası: problemi doğru çerçeveleyip, doğru aracı doğru yerde kullanma alışkanlığı.</p>
+      </header>
 
-    return (
-        <div className="space-y-12 pb-20">
-            <div className="flex items-center gap-4 mb-8">
-                <Cpu className={`w-8 h-8 animate-pulse ${isSecureMode ? 'text-yellow-500' : 'text-neon-red'}`} />
-                <h2 className="text-3xl font-[family-name:var(--font-display)] tracking-wider">
-                    {isSecureMode ? 'SECURE_CONNECTOME' : 'ARSENAL'} <span className={isSecureMode ? 'text-yellow-500' : 'text-neon-red'}>//</span> BIOLUMINESCENT_SKILL_GRID
-                </h2>
-            </div>
+      <section className="grid gap-4 md:grid-cols-2">
+        {groups.map((group, index) => {
+          const Icon = group.icon;
+          return (
+            <motion.article
+              key={group.title}
+              className="rounded-2xl border border-white/10 bg-white/[.035] p-6 transition hover:border-[#b9f36b]/40 hover:bg-white/[.05]"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: .2 }}
+              transition={{ duration: .4, delay: index * .07 }}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl" style={{ color: group.color, background: `${group.color}12` }}><Icon size={20} /></span><h2 className="text-xl font-semibold">{group.title}</h2></div>
+                <span className="font-mono text-[10px] text-white/30">{String(group.items.length).padStart(2, "0")}</span>
+              </div>
+              <div className="mt-7 flex flex-wrap gap-2">{group.items.map((item) => <span key={item} className="rounded-full border border-white/10 bg-black/10 px-3 py-2 text-xs text-white/65">{item}</span>)}</div>
+            </motion.article>
+          );
+        })}
+      </section>
 
-            {/* Skill Grid Visualization */}
-            <section className="space-y-8">
-                <div className="flex items-center gap-3 px-4 border-l-2 border-neon-blue/50">
-                    <Terminal className="w-5 h-5 text-neon-blue" />
-                    <h3 className="text-xl font-[family-name:var(--font-display)] tracking-tight">AI & FORWARD_INTELLIGENCE</h3>
-                </div>
-                <SkillHexGrid skills={profileData.ai_tools} />
-
-                <div className="flex items-center gap-3 px-4 border-l-2 border-neon-green/50">
-                    <Shield className="w-5 h-5 text-neon-green" />
-                    <h3 className="text-xl font-[family-name:var(--font-display)] tracking-tight">SYSTEMS & ARCHITECTURE</h3>
-                </div>
-                <SkillHexGrid skills={[
-                    ...profileData.skills.languages.map(l => ({ name: l, level: 90, category: 'Language' })),
-                    ...profileData.skills.frameworks.map(f => ({ name: f, level: 85, category: 'Framework' })),
-                    ...profileData.skills.tools.map(t => ({ name: t, level: 80, category: 'Tool' }))
-                ]} color="var(--color-neon-green)" />
-            </section>
-
-            <div className="grid md:grid-cols-2 gap-12">
-                <section className={`bg-white/5 p-6 rounded-lg border cyber-clip-br ${isSecureMode ? 'border-yellow-500/20' : 'border-white/10'}`}>
-                    <h3 className={`text-xl font-[family-name:var(--font-display)] mb-6 flex items-center gap-2 ${isSecureMode ? 'text-yellow-500' : 'text-neon-green'}`}>
-                        <Shield className="w-5 h-5" /> DOMAIN_INTEL
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                        {profileData.skills.concepts.map((concept, i) => (
-                            <div
-                                key={i}
-                                className={`px-2 py-1 border text-[9px] font-mono tracking-wide transition-all clip-path-hexagon ${isSecureMode ? 'border-yellow-500/30 bg-yellow-500/5 text-yellow-500' : 'border-neon-green/30 bg-neon-green/5 text-neon-green'}`}
-                            >
-                                {concept}
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </div>
-        </div>
-    );
+      <section className="rounded-2xl border border-white/10 bg-[#b9f36b]/[.05] p-7 md:p-9">
+        <div className="flex items-start gap-4"><ShieldCheck className="mt-1 shrink-0 text-[#b9f36b]" size={22} /><div><h2 className="text-2xl font-semibold">Çalışma prensibim</h2><p className="mt-3 max-w-3xl leading-7 text-white/55">Teknoloji benim için gösteriş değil, kaldıraç. Önce problemi ve kullanıcıyı anlıyor; sonra ölçülebilir bir çözüm tasarlıyor, küçük bir prototiple doğruluyor ve sürdürülebilir bir sisteme dönüştürüyorum.</p></div></div>
+        <div className="mt-7 flex flex-wrap gap-2">{profileData.skills.concepts.map((concept) => <span key={concept} className="rounded-full border border-[#b9f36b]/25 px-3 py-2 text-xs text-[#ccecae]">{concept}</span>)}</div>
+      </section>
+    </div>
+  );
 }
