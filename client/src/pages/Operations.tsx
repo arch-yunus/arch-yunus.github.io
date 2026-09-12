@@ -1,83 +1,290 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Filter, GitFork, Star } from "lucide-react";
-import { useMemo, useState } from "react";
-import { Link } from "wouter";
+// @ts-nocheck
 import { profileData } from "@/lib/data";
-
-const filters = ["Hepsi", "Yapay zekâ", "Siber güvenlik", "Robotik", "Web & araçlar"];
-
-const filterMatchers: Record<string, RegExp> = {
-  "Yapay zekâ": /ai|antenna|poseidon|neuro|libramind|llm|zeka|deep|model|paint|math/i,
-  "Siber güvenlik": /cyber|security|prison|btk|hack|siber/i,
-  Robotik: /robot|autonomous|iha|auv|neptune|deniz|cizgi|sürü|ika/i,
-  "Web & araçlar": /route|dev|university|milli|noaa|meta|tool|engineer/i,
-};
+import { motion, AnimatePresence } from "framer-motion";
+import { Target, ExternalLink, Info, Search, Cpu, Star, GitFork, ShieldCheck, Terminal, Layers } from "lucide-react";
+import { useState, useMemo } from "react";
+import { Link } from "wouter";
+import { ProjectModal } from "@/components/cyber-ui/ProjectModal";
+import { useCyberSound } from "@/hooks/use-cyber-sound";
+import { MissionLogs } from "@/components/cyber-ui/MissionLogs";
 
 export default function Operations() {
-  const [filter, setFilter] = useState("Hepsi");
-  const projects = useMemo(() => {
-    if (filter === "Hepsi") return profileData.featured_projects;
-    const matcher = filterMatchers[filter];
-    return profileData.featured_projects.filter((project) => matcher.test(`${project.name} ${project.description}`));
-  }, [filter]);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+    const [searchQuery, setSearchQuery] = useState<string>("");
+    const [selectedProject, setSelectedProject] = useState<any | null>(null);
+    const { playSound } = useCyberSound();
 
-  return (
-    <div className="space-y-10 pb-12">
-      <header className="max-w-3xl">
-        <div className="section-eyebrow">Seçilmiş işler</div>
-        <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">Projeler</h1>
-        <p className="mt-5 max-w-2xl text-base leading-8 text-white/55 md:text-lg">
-          Yapay zekâ, optimizasyon ve güvenlik ekseninde geliştirdiğim açık kaynak çalışmalar. Her proje, bir soruyu daha iyi çözme denemesi.
-        </p>
-      </header>
+    const categories = Object.keys(profileData.categories);
 
-      <div className="flex flex-wrap items-center gap-2 border-y border-white/10 py-4">
-        <div className="mr-2 flex items-center gap-2 text-xs text-white/40"><Filter size={14} /> Filtrele</div>
-        {filters.map((item) => (
-          <button
-            key={item}
-            type="button"
-            onClick={() => setFilter(item)}
-            className={`rounded-full border px-4 py-2 text-xs transition ${filter === item ? "border-[#b9f36b] bg-[#b9f36b] text-[#0b0d0f]" : "border-white/12 bg-white/[.03] text-white/55 hover:border-white/30 hover:text-white"}`}
-          >
-            {item}
-          </button>
-        ))}
-        <span className="ml-auto text-xs text-white/35">{projects.length} proje</span>
-      </div>
+    // Extract unique languages
+    const languages = useMemo(() => {
+        const langs = new Set<string>();
+        profileData.featured_projects.forEach(p => {
+            if (p.language) langs.add(p.language);
+        });
+        return Array.from(langs);
+    }, []);
 
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <motion.article
-            key={project.name}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[.035] transition hover:-translate-y-1 hover:border-[#b9f36b]/45 hover:bg-[#b9f36b]/[.045]"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: .15 }}
-            transition={{ duration: .4, delay: Math.min(index * .035, .22) }}
-          >
-            <div className="relative h-48 overflow-hidden bg-[#19201d]">
-              <img src={project.image} alt={project.name} className="h-full w-full object-cover opacity-75 grayscale transition duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b0d0f] via-transparent to-transparent" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-[#0b0d0f]/70 px-3 py-1 font-mono text-[10px] text-[#b9f36b] backdrop-blur">{project.language}</span>
-              <span className="absolute bottom-4 right-4 font-mono text-[10px] text-white/40">{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <div className="flex flex-1 flex-col p-5">
-              <h2 className="text-xl font-semibold text-white group-hover:text-[#b9f36b]">{project.name}</h2>
-              <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/50">{project.description}</p>
-              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/35">
-                <div className="flex gap-3"><span className="inline-flex items-center gap-1"><Star size={13} /> {project.stars}</span><span className="inline-flex items-center gap-1"><GitFork size={13} /> {project.forks}</span></div>
-                <div className="flex items-center gap-3">
-                  <Link href={`/operations/${project.name.toLowerCase()}`} className="inline-flex items-center gap-1 text-white/65 hover:text-[#b9f36b]">Detay <ArrowUpRight size={13} /></Link>
-                  <a href={project.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-white/65 hover:text-[#b9f36b]" aria-label={`${project.name} GitHub`}>Kaynak <ExternalLink size={13} /></a>
+    const filteredProjects = useMemo(() => {
+        return profileData.featured_projects.filter(project => {
+            // Category match
+            if (selectedCategory) {
+                const categoryProjects = profileData.categories[selectedCategory as keyof typeof profileData.categories] || [];
+                if (!categoryProjects.includes(project.name)) return false;
+            }
+            // Language match
+            if (selectedLanguage && project.language !== selectedLanguage) {
+                return false;
+            }
+            // Search query match
+            if (searchQuery.trim()) {
+                const q = searchQuery.toLowerCase().trim();
+                const matchName = project.name.toLowerCase().includes(q);
+                const matchDesc = project.description.toLowerCase().includes(q);
+                const matchLang = project.language?.toLowerCase().includes(q);
+                if (!matchName && !matchDesc && !matchLang) return false;
+            }
+            return true;
+        });
+    }, [selectedCategory, selectedLanguage, searchQuery]);
+
+    const totalStars = useMemo(() => {
+        return profileData.featured_projects.reduce((acc, curr) => acc + (curr.stars || 0), 0);
+    }, []);
+
+    return (
+        <div className="space-y-8 pb-12">
+            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+
+            {/* Header with Metrics */}
+            <div className="flex flex-col gap-6 pb-6 border-b border-white/10">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                        <Target className="w-8 h-8 text-neon-green animate-pulse" />
+                        <div>
+                            <h2 className="text-3xl font-[family-name:var(--font-display)] tracking-wider text-white">
+                                OPERATIONS <span className="text-neon-green">//</span> MISSION REPOSITORY
+                            </h2>
+                            <p className="text-xs font-mono text-white/50">TACTICAL INVENTORY OF AUTONOMOUS SYSTEMS & ARCHITECTURES</p>
+                        </div>
+                    </div>
+
+                    {/* Quick Stats Pill */}
+                    <div className="flex items-center gap-3 font-mono text-xs">
+                        <div className="px-3 py-1.5 bg-white/5 border border-white/10 rounded flex items-center gap-2">
+                            <Layers className="w-3.5 h-3.5 text-neon-blue" />
+                            <span className="text-white/60">DEPLOYED:</span>
+                            <span className="text-neon-blue font-bold">{profileData.featured_projects.length}</span>
+                        </div>
+                        <div className="px-3 py-1.5 bg-white/5 border border-white/10 rounded flex items-center gap-2">
+                            <Star className="w-3.5 h-3.5 text-yellow-400" />
+                            <span className="text-white/60">TOTAL_STARS:</span>
+                            <span className="text-yellow-400 font-bold">{profileData.github_stats.total_stars}+</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </motion.article>
-        ))}
-      </div>
 
-      {projects.length === 0 && <div className="rounded-2xl border border-dashed border-white/15 p-12 text-center text-white/45">Bu filtrede henüz proje görünmüyor.</div>}
-    </div>
-  );
+                {/* Search Bar & Filters */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+                    {/* Search input */}
+                    <div className="lg:col-span-4 relative group">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-hover:text-neon-blue transition-colors" />
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="SEARCH_PROJECTS_OR_STACK..."
+                            className="w-full bg-black/60 border border-white/20 pl-9 pr-4 py-2 text-xs font-mono text-white placeholder:text-white/30 focus:outline-none focus:border-neon-blue transition-all"
+                        />
+                        {searchQuery && (
+                            <button
+                                onClick={() => setSearchQuery("")}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono text-white/40 hover:text-white"
+                            >
+                                ×
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Category Filter Pills */}
+                    <div className="lg:col-span-8 flex flex-wrap gap-2 items-center">
+                        <button
+                            onClick={() => {
+                                setSelectedCategory(null);
+                                playSound('click');
+                            }}
+                            className={`px-3 py-1.5 text-xs font-mono border transition-all ${selectedCategory === null ? 'border-neon-green text-neon-green bg-neon-green/10 shadow-[0_0_10px_rgba(0,255,157,0.2)]' : 'border-white/15 text-white/60 hover:border-white/40'}`}
+                        >
+                            ALL_DOMAINS
+                        </button>
+                        {categories.slice(0, 5).map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => {
+                                    setSelectedCategory(selectedCategory === cat ? null : cat);
+                                    playSound('click');
+                                }}
+                                className={`px-3 py-1.5 text-xs font-mono border transition-all ${selectedCategory === cat ? 'border-neon-green text-neon-green bg-neon-green/10 shadow-[0_0_10px_rgba(0,255,157,0.2)]' : 'border-white/15 text-white/60 hover:border-white/40'}`}
+                            >
+                                {cat.toUpperCase().replace(/ /g, '_')}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Language pills secondary filter */}
+                <div className="flex flex-wrap items-center gap-2 pt-1">
+                    <span className="text-[10px] font-mono text-white/40 uppercase mr-1">Stack Filter:</span>
+                    <button
+                        onClick={() => setSelectedLanguage(null)}
+                        className={`px-2 py-0.5 text-[10px] font-mono border rounded ${selectedLanguage === null ? 'border-neon-blue text-neon-blue bg-neon-blue/10' : 'border-white/10 text-white/40 hover:text-white'}`}
+                    >
+                        ALL
+                    </button>
+                    {languages.map(lang => (
+                        <button
+                            key={lang}
+                            onClick={() => {
+                                setSelectedLanguage(selectedLanguage === lang ? null : lang);
+                                playSound('click');
+                            }}
+                            className={`px-2 py-0.5 text-[10px] font-mono border rounded transition-all ${selectedLanguage === lang ? 'border-neon-blue text-neon-blue bg-neon-blue/10' : 'border-white/10 text-white/40 hover:text-white'}`}
+                        >
+                            {lang}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Results status banner */}
+            <div className="flex items-center justify-between text-xs font-mono text-white/40">
+                <span>FOUND {filteredProjects.length} MATCHING SYSTEM NODES</span>
+                {(selectedCategory || selectedLanguage || searchQuery) && (
+                    <button
+                        onClick={() => {
+                            setSelectedCategory(null);
+                            setSelectedLanguage(null);
+                            setSearchQuery("");
+                        }}
+                        className="text-neon-blue hover:underline"
+                    >
+                        RESET_FILTERS
+                    </button>
+                )}
+            </div>
+
+            {/* Projects Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <AnimatePresence mode="popLayout">
+                    {filteredProjects.map((project, i) => (
+                        <motion.div
+                            key={project.name}
+                            layout
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
+                            className="group relative h-full flex flex-col"
+                        >
+                            {/* Cyber Card Container */}
+                            <div
+                                className="h-full bg-black/40 border border-white/10 group-hover:border-neon-blue/50 group-hover:shadow-[0_0_20px_rgba(0,243,255,0.2)] transition-all duration-300 flex flex-col cyber-clip-br overflow-hidden"
+                            >
+                                <Link
+                                    href={`/operations/${encodeURIComponent(project.name.toLowerCase())}`}
+                                    onClick={() => playSound('click')}
+                                    className="block relative h-48 overflow-hidden cursor-pointer"
+                                >
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                        onError={(e) => {
+                                            // Fallback for missing project image
+                                            e.currentTarget.src = "/images/project-ai.jpg";
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                                    <div className="absolute top-2 right-2 px-2 py-1 bg-black/80 border border-white/20 text-[10px] font-mono text-neon-blue backdrop-blur-sm">
+                                        {project.language}
+                                    </div>
+                                    <div className="absolute top-2 left-2 px-2 py-0.5 bg-black/80 border border-neon-green/30 text-[9px] font-mono text-neon-green backdrop-blur-sm flex items-center gap-1">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse" /> ONLINE
+                                    </div>
+                                </Link>
+
+                                <div className="p-6 flex-1 flex flex-col">
+                                    <Link
+                                        href={`/operations/${encodeURIComponent(project.name.toLowerCase())}`}
+                                        onClick={() => playSound('click')}
+                                    >
+                                        <h3 className="text-lg font-[family-name:var(--font-display)] font-bold mb-2 text-white group-hover:text-neon-blue transition-colors cursor-pointer">
+                                            {project.name}
+                                        </h3>
+                                    </Link>
+                                    <p className="text-sm text-white/60 mb-6 flex-1 line-clamp-3 font-mono">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs font-mono">
+                                        <div className="flex gap-3 text-white/40">
+                                            <span className="flex items-center gap-1"><Star className="w-3 h-3 text-yellow-400" /> {project.stars}</span>
+                                            <span className="flex items-center gap-1"><GitFork className="w-3 h-3" /> {project.forks}</span>
+                                        </div>
+
+                                        <div className="flex items-center gap-3">
+                                            <a
+                                                href={project.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="flex items-center gap-1 text-neon-blue hover:text-white transition-colors"
+                                            >
+                                                SOURCE <ExternalLink className="w-3 h-3" />
+                                            </a>
+                                            <button
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    e.stopPropagation();
+                                                    setSelectedProject(project);
+                                                    playSound('scan');
+                                                }}
+                                                className="flex items-center gap-1 text-neon-green/80 hover:text-neon-green transition-colors"
+                                                title="Quick Intel Preview"
+                                            >
+                                                INTEL <Info className="w-3 h-3" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
+            </div>
+
+            {filteredProjects.length === 0 && (
+                <div className="text-center py-16 border border-dashed border-white/10 rounded-lg p-8">
+                    <Terminal className="w-12 h-12 text-white/20 mx-auto mb-4 animate-pulse" />
+                    <h3 className="text-lg font-mono text-white/60 mb-2">NO MATCHING OPERATIONS FOUND</h3>
+                    <p className="text-xs font-mono text-white/40 mb-4">No systems match your specified filter parameters.</p>
+                    <button
+                        onClick={() => {
+                            setSelectedCategory(null);
+                            setSelectedLanguage(null);
+                            setSearchQuery("");
+                        }}
+                        className="px-4 py-2 border border-neon-blue text-neon-blue text-xs font-mono hover:bg-neon-blue/10 transition-colors"
+                    >
+                        RESET FILTERS
+                    </button>
+                </div>
+            )}
+
+            <MissionLogs />
+        </div>
+    );
 }
+

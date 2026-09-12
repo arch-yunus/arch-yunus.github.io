@@ -20,8 +20,8 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
-    minify: false,
-    sourcemap: true,
+    minify: "esbuild",
+    sourcemap: false,
   },
   server: {
     port: 3000,

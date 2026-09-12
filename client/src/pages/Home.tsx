@@ -1,188 +1,189 @@
-import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, BriefcaseBusiness, Cpu, Github, Linkedin, Sparkles } from "lucide-react";
-import { Link } from "wouter";
-import { profileData } from "@/lib/data";
 
-const focusAreas = [
-  {
-    icon: Cpu,
-    label: "Yapay zekâ",
-    title: "Modelleri ürüne dönüştürüyorum.",
-    text: "LLM, model optimizasyonu ve bilgi sistemlerini gerçek problemlere dokunan ürünlere bağlıyorum.",
-  },
-  {
-    icon: BriefcaseBusiness,
-    label: "Ürün & mimari",
-    title: "Karmaşık sistemleri sadeleştiriyorum.",
-    text: "Fikirden çalışan prototipe; ölçülebilir, sürdürülebilir ve anlaşılır sistemler kuruyorum.",
-  },
-  {
-    icon: Sparkles,
-    label: "Merak & üretim",
-    title: "Her hafta yeni bir şey öğreniyorum.",
-    text: "Projeler, yazılar ve sertifikalarla sürekli gelişen bir mühendislik pratiği oluşturuyorum.",
-  },
-];
+// @ts-nocheck
+import { profileData } from "@/lib/data";
+import { motion } from "framer-motion";
+import { Terminal, Shield, Cpu, ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { useState, useEffect } from "react";
+import { useVault } from "@/contexts/VaultContext";
+import { Zap, Activity, Microscope } from "lucide-react";
+import { OperationLogs } from "@/components/cyber-ui/OperationLogs";
+import { CyberGlobe } from "@/components/cyber-ui/CyberGlobe";
 
 export default function Home() {
-  const certificateCount = Object.values(profileData.certificates).reduce((total, group) => total + group.length, 0);
-  const selectedProjects = profileData.featured_projects.slice(0, 3);
+  const [typedText, setTypedText] = useState("");
+  const FullText = "INITIALIZING OPERATOR PROFILE...";
+
+  const { isSecureMode, metrics } = useVault();
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypedText(FullText.slice(0, i + 1));
+      i++;
+      if (i > FullText.length) clearInterval(interval);
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="home-page">
-      <section className="hero-grid" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <motion.div
-            className="eyebrow"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-          >
-            Merhaba, ben Bahattin Yunus
-          </motion.div>
-
-          <motion.h1
-            id="hero-title"
-            className="hero-title"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.08 }}
-          >
-            Fikirleri <span className="accent">çalışan</span> sistemlere dönüştürüyorum.
-          </motion.h1>
-
-          <motion.p
-            className="hero-lead"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.18 }}
-          >
-            Yazılım mühendisliği öğrencisi, yapay zekâ meraklısı ve sistem tasarımcısıyım. İnsanların işini kolaylaştıran, geleceğe hazır teknolojiler üretmek için çalışıyorum.
-          </motion.p>
-
-          <motion.div
-            className="hero-actions"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.26 }}
-          >
-            <Link href="/operations" className="button-primary">
-              Projelerimi gör <ArrowRight size={16} />
-            </Link>
-            <Link href="/comms" className="button-secondary">
-              Birlikte çalışalım <ArrowUpRight size={16} />
-            </Link>
-          </motion.div>
-
-          <div className="hero-note"><span /> Şu anda yeni projelere ve iyi fikirlere açığım.</div>
+    <div className="flex flex-col justify-center min-h-[60vh] gap-12">
+      {/* Hero Header */}
+      <div className="space-y-6">
+        <div className="font-mono text-neon-blue/80 text-sm tracking-widest flex items-center gap-2">
+          <span className="w-2 h-2 bg-neon-blue animate-pulse"></span>
+          {typedText}<span className="animate-blink">_</span>
         </div>
 
-        <motion.aside
-          className="hero-aside"
-          initial={{ opacity: 0, scale: .97, y: 18 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: .7, delay: .12 }}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-[family-name:var(--font-display)] font-bold leading-none text-white mix-blend-screen">
+          ARCHITECT.<br />
+          STRATEGIST.<br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-white to-neon-red animate-gradient-x">METAL YAKA.</span>
+        </h1>
+
+        <p className="max-w-2xl text-lg text-white/60 font-mono leading-relaxed border-l-2 border-neon-blue/30 pl-6">
+          {profileData.personal.tagline}
+        </p>
+
+        <div className="flex justify-center py-12">
+          <CyberGlobe />
+        </div>
+      </div>
+
+      {/* Status Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Link href="/arsenal" className="block">
+          <div className="p-6 border border-white/10 bg-white/5 cyber-clip-tl group hover:bg-neon-blue/5 hover:border-neon-blue/40 transition-all cursor-pointer h-full">
+            <div className="flex items-center justify-between mb-4">
+              <Shield className="w-6 h-6 text-neon-green" />
+              <span className="font-mono text-xs text-neon-green">ACTIVE</span>
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-display)] text-white group-hover:text-neon-blue mb-1 transition-colors">
+              CYBERNETICS
+            </h3>
+            <p className="text-sm text-white/50 font-mono">
+              System architecture & AI Defense protocols online.
+            </p>
+          </div>
+        </Link>
+
+        <Link href="/intelligence" className="block">
+          <div className="p-6 border border-white/10 bg-white/5 group hover:bg-neon-red/5 hover:border-neon-red/40 transition-all cursor-pointer h-full">
+            <div className="flex items-center justify-between mb-4">
+              <Cpu className="w-6 h-6 text-neon-red" />
+              <span className="font-mono text-xs text-neon-red">OVERCLOCKED</span>
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-display)] text-white group-hover:text-neon-red mb-1 transition-colors">
+              INTELLIGENCE
+            </h3>
+            <p className="text-sm text-white/50 font-mono">
+              Neural networks & Optimization algorithms running.
+            </p>
+          </div>
+        </Link>
+
+        <Link href="/operations" className="block">
+          <div className={`p-6 border cyber-clip-br group transition-all cursor-pointer h-full ${isSecureMode ? 'border-yellow-500/20 bg-yellow-500/5 hover:bg-yellow-500/10' : 'border-white/10 bg-white/5 hover:bg-neon-blue/5 hover:border-neon-blue/40'}`}>
+            <div className="flex items-center justify-between mb-4">
+              <Terminal className={`w-6 h-6 ${isSecureMode ? 'text-yellow-500' : 'text-neon-blue'}`} />
+              <span className={`font-mono text-xs ${isSecureMode ? 'text-yellow-500' : 'text-neon-blue'}`}>{isSecureMode ? 'SECURE_UPLINK' : 'DEPLOYED'}</span>
+            </div>
+            <h3 className="text-2xl font-[family-name:var(--font-display)] text-white group-hover:text-neon-blue mb-1 transition-colors">
+              OPERATIONS
+            </h3>
+            <p className="text-sm text-white/50 font-mono">
+              {profileData.github_stats.public_repos} systems accessible via {isSecureMode ? 'encrypted' : 'public'} uplink.
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      {/* Flagship Direct Jump Pills */}
+      <div className="p-4 bg-white/5 border border-white/10 rounded-lg flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-xs font-mono text-neon-blue">
+          <span className="w-2 h-2 rounded-full bg-neon-blue animate-ping" />
+          <span>TACTICAL_PRIORITIES:</span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/doctrine" className="px-3 py-1 bg-black/60 hover:bg-neon-blue/10 border border-white/10 hover:border-neon-blue/50 text-xs font-mono text-white/80 hover:text-neon-blue rounded transition-all">
+            ANKA_SILICON // DISTILLATION
+          </Link>
+          <Link href="/operations/beeroute" className="px-3 py-1 bg-black/60 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 text-xs font-mono text-white/80 hover:text-neon-green rounded transition-all">
+            BEEROUTE // NP-HARD
+          </Link>
+          <Link href="/intelligence" className="px-3 py-1 bg-black/60 hover:bg-yellow-500/10 border border-white/10 hover:border-yellow-500/50 text-xs font-mono text-white/80 hover:text-yellow-500 rounded transition-all">
+            SIBER_VATAN // ZERO-TRUST
+          </Link>
+        </div>
+      </div>
+
+      {/* Vanguard Dashboard (Secure Mode Only) */}
+      {isSecureMode && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 p-6 bg-yellow-500/5 border border-yellow-500/20 relative overflow-hidden group"
         >
-          <div className="profile-card">
-            <div className="profile-image">
-              <img src={profileData.personal.avatar_url} alt="Bahattin Yunus Çetin" />
-              <div className="profile-overlay">
-                <div>
-                  <strong>Bahattin Yunus Çetin</strong>
-                  <span>AI · Yazılım · Sistem mimarisi</span>
-                </div>
-                <div className="profile-badge"><Sparkles size={20} /></div>
-              </div>
+          <div className="absolute inset-0 bg-scanlines opacity-5 pointer-events-none"></div>
+
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-yellow-500/60 uppercase">
+              <Zap className="w-3 h-3" /> Core_Frequency
             </div>
-            <div className="profile-meta">
-              <div><strong>{profileData.github_stats.public_repos}+</strong><span>Açık kaynak proje</span></div>
-              <div><strong>{certificateCount}+</strong><span>Sertifika</span></div>
-              <div><strong>2026</strong><span>Aktif üretim</span></div>
+            <div className="text-2xl font-[family-name:var(--font-display)] text-white">
+              5.2 <span className="text-xs text-white/40 italic">GHz</span>
             </div>
           </div>
-        </motion.aside>
-      </section>
 
-      <section aria-labelledby="focus-title">
-        <div className="section-heading">
-          <div>
-            <div className="section-eyebrow">Odak alanlarım</div>
-            <h2 id="focus-title">Teknolojiye insan tarafından bakıyorum.</h2>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-yellow-500/60 uppercase">
+              <Activity className="w-3 h-3" /> Neural_Latency
+            </div>
+            <div className="text-2xl font-[family-name:var(--font-display)] text-white">
+              {metrics?.latency || '12ms'}
+            </div>
           </div>
-          <p>Strateji, mühendislik ve öğrenme merakını aynı masada buluşturan bir çalışma biçimi.</p>
-        </div>
 
-        <div className="project-preview-grid">
-          {focusAreas.map((area, index) => {
-            const Icon = area.icon;
-            return (
-              <motion.article
-                key={area.label}
-                className="preview-card"
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: .3 }}
-                transition={{ duration: .45, delay: index * .08 }}
-              >
-                <div>
-                  <div className="preview-card-top"><span>{area.label}</span><Icon size={18} /></div>
-                  <h3>{area.title}</h3>
-                  <p>{area.text}</p>
-                </div>
-                <span className="preview-card-link">Daha fazlası <ArrowUpRight size={14} /></span>
-              </motion.article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section aria-labelledby="projects-title">
-        <div className="section-heading">
-          <div>
-            <div className="section-eyebrow">Seçilmiş işler</div>
-            <h2 id="projects-title">Masamdan çıkan bazı şeyler.</h2>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-yellow-500/60 uppercase">
+              <Microscope className="w-3 h-3" /> Threat_Level
+            </div>
+            <div className="text-2xl font-[family-name:var(--font-display)] text-white">
+              {metrics?.threatLevel || 'LOW'}
+            </div>
           </div>
-          <Link href="/operations" className="button-secondary">Tüm projeler <ArrowRight size={15} /></Link>
-        </div>
 
-        <div className="project-preview-grid">
-          {selectedProjects.map((project, index) => (
-            <motion.article
-              key={project.name}
-              className="preview-card"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: .3 }}
-              transition={{ duration: .45, delay: index * .08 }}
-            >
-              <div>
-                <div className="preview-card-top"><span>0{index + 1} · {project.language}</span><ArrowUpRight size={17} /></div>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-              </div>
-              <a className="preview-card-link" href={project.url} target="_blank" rel="noreferrer">GitHub'da incele <Github size={14} /></a>
-            </motion.article>
-          ))}
-        </div>
-      </section>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-yellow-500/60 uppercase">
+              <Shield className="w-3 h-3" /> Integrity
+            </div>
+            <div className="text-2xl font-[family-name:var(--font-display)] text-white">
+              {metrics?.shieldStatus || '98.4%'}
+            </div>
+          </div>
 
-      <section className="about-strip" aria-labelledby="about-title">
-        <h2 id="about-title">İyi teknoloji, iyi sorularla başlar.</h2>
-        <div>
-          <p>{profileData.personal.bio.split("\n")[0]}</p>
-          <p>Bugün odağım; yapay zekâ sistemleri, siber güvenlik ve karmaşık teknolojileri herkes için daha anlaşılır hâle getiren ürünler.</p>
-          <div className="about-points">
-            <span>AI & LLM</span>
-            <span>Sistem mimarisi</span>
-            <span>Siber güvenlik</span>
-            <span>Açık kaynak</span>
+          {/* Decorative Corner */}
+          <div className="absolute top-0 right-0 p-2">
+            <div className="w-1 h-1 bg-yellow-500 animate-ping"></div>
           </div>
-          <div className="hero-actions">
-            <Link href="/doctrine" className="button-secondary">Hikâyemi oku <ArrowRight size={15} /></Link>
-            <a href={profileData.personal.linkedin_url} target="_blank" rel="noreferrer" className="button-secondary"><Linkedin size={15} /> LinkedIn</a>
-          </div>
-        </div>
-      </section>
+        </motion.div>
+      )}
+
+      {/* Action Buttons */}
+      <div className="flex flex-wrap gap-4 pt-6">
+        <Link href="/operations" className="px-8 py-4 bg-neon-blue text-black font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all flex items-center gap-2">
+          INITIATE PROTOCOLS <ArrowRight className="w-4 h-4" />
+        </Link>
+
+        <a href={profileData.personal.github_url} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 text-white font-mono tracking-wider hover:bg-white/10 transition-all flex items-center gap-2">
+          GITHUB LINK <ExternalLink className="w-4 h-4" />
+        </a>
+      </div>
+
+      {/* Operation Logs Overlay */}
+      <div className="fixed bottom-24 right-6 w-64 hidden xl:block pointer-events-auto">
+        <OperationLogs />
+      </div>
     </div>
   );
 }
