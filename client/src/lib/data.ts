@@ -126,28 +126,52 @@ export const profileData = {
   ],
   education: [
     {
+      school: "Hacettepe Üniversitesi",
+      degree: "Ön Lisans",
+      field: "Alternatif Enerji Kaynakları Teknolojisi",
+      period: "2026 – 2028",
+      icon: "Zap",
+      description: "Yenilenebilir ve alternatif enerji teknolojileri, enerji depolama sistemleri, donanım güç optimizasyonu ve otonom sistemlerde sürdürülebilir enerji yönetimi."
+    },
+    {
+      school: "Karadeniz Teknik Üniversitesi",
+      degree: "Lisans",
+      field: "Yazılım Mühendisliği",
+      period: "2023 – 2026",
+      icon: "Terminal",
+      description: "Sistem mimarisi, AI/LLM entegrasyonu, stokastik optimizasyon (BeeRoute), düşük seviyeli sistem tasarımı ve ileri seviye yazılım mühendisliği."
+    },
+    {
+      school: "İstanbul Üniversitesi",
+      degree: "Lisans",
+      field: "Yönetim Bilişim Sistemleri (AUZEF)",
+      period: "2025 – 2029",
+      icon: "Layers",
+      description: "Yazılım ve işletme vizyonunun hibrit entegrasyonu, büyük veri analitiği, teknoloji yönetimi ve kurumsal siber güvenlik yönetişimi."
+    },
+    {
+      school: "Anadolu Üniversitesi",
+      degree: "Ön Lisans",
+      field: "Bilgisayar Programcılığı (AÖF)",
+      period: "2025 – 2027",
+      icon: "Code2",
+      description: "Algoritmik verimlilik, sistem programlama, veri yapıları, C++ ve Python tabanlı çekirdek yazılım mimarisi."
+    },
+    {
+      school: "Atatürk Üniversitesi",
+      degree: "Lisans",
+      field: "Tarih (ATA-AÖF)",
+      period: "2026 – 2030",
+      icon: "Book",
+      description: "Türk mitolojisi, stratejik tarihsel analiz, devlet felsefesi ve oyun evreni (Arkıl Games) tasarımı için derin kültürel doktrin altyapısı."
+    },
+    {
       school: "Eskişehir Teknik Üniversitesi",
       degree: "Ön Lisans",
       field: "İnsansız Hava Aracı Teknolojisi ve Operasyonu",
       status: "Eğitim Devam Ediyor",
       icon: "Plane",
       description: "İHA/SİHA sistem tasarımı, telemetri protokolleri, aviyonik mimari, aerodinamik hesaplamalar ve otonom görev planlama."
-    },
-    {
-      school: "İstanbul Üniversitesi",
-      degree: "Lisans",
-      field: "Yönetim Bilişim Sistemleri",
-      period: "Eylül 2025 – Haziran 2029",
-      icon: "Layers",
-      description: "Yazılım mimarisi ile stratejik iş modellerinin entegrasyonu, veri analitiği, teknoloji yönetimi ve siber güvenlik yönetişimi."
-    },
-    {
-      school: "Anadolu Üniversitesi",
-      degree: "Ön Lisans",
-      field: "Bilgisayar Programcılığı",
-      period: "Eylül 2025 – Haziran 2027",
-      icon: "Code2",
-      description: "Sistem programlama, veri yapıları, C++ ve Python tabanlı algoritmik verimlilik ve çekirdek yazılım geliştirme."
     }
   ],
   aviation_accreditations: [

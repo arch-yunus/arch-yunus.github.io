@@ -88,8 +88,8 @@ export const VanguardAI = () => {
 
         if (q.includes("eğitim") || q.includes("üniversite") || q.includes("okul") || q.includes("sertifika") || q.includes("lisans") || q.includes("btk") || q.includes("akademik")) {
             return {
-                text: "Akademik Eğitim:\n- Eskişehir Teknik Ünv. (İnsansız Hava Aracı Teknolojisi ve Operasyonu)\n- İstanbul Ünv. (Yönetim Bilişim Sistemleri - Lisans)\n- Anadolu Ünv. (Bilgisayar Programcılığı)\n\nAkreditasyonlar: SHGM İHA-1 Lisansı, TÜBİTAK Uzay, T3 Vakfı Sualtı, TUA Interstellar ve BTK Akademi bünyesinde 120'den fazla onaylı sertifika.",
-                action: { label: "120+ Sertifika Kasası", path: "/intelligence" }
+                text: "Akademik Eğitim:\n- Hacettepe Ünv. (Alternatif Enerji Kaynakları Teknolojisi | 2026 – 2028)\n- Karadeniz Teknik Ünv. (Yazılım Mühendisliği | 2023 – 2026)\n- İstanbul Ünv. (Yönetim Bilişim Sistemleri - Lisans | 2025 – 2029)\n- Anadolu Ünv. (Bilgisayar Programcılığı | 2025 – 2027)\n- Atatürk Ünv. (Tarih - Lisans | 2026 – 2030)\n- Eskişehir Teknik Ünv. (İHA Teknolojisi ve Operasyonu)\n\nAkreditasyonlar: SHGM İHA-1 Lisansı, TÜBİTAK Uzay, T3 Vakfı Sualtı, TUA Interstellar ve BTK Akademi bünyesinde 120'den fazla onaylı sertifika.",
+                action: { label: "120+ Sertifika & Eğitim Kasası", path: "/intelligence" }
             };
         }
 
