@@ -78,7 +78,11 @@ const certificationsData: CertItem[] = [
 
   // 🛸 Havacılık, Uzay & Otonom Sistemler
   { name: "İHA-1 Sportif/Amatör Pilotaj Lisansı", issuer: "Sivil Havacılık Genel Müdürlüğü (SHGM)", category: "Havacılık & Otonom" },
-  { name: "TÜBİTAK Havacılık ve Uzay Keşif Kampı", issuer: "TÜBİTAK", category: "Havacılık & Otonom" },
+  { name: "6. Dönem Havacılık Motorları Okulu", issuer: "TEI - TUSAŞ Motor Sanayii A.Ş.", category: "Havacılık & Otonom" },
+  { name: "KAMP+ Havacılık ve Uzay Kampı (Bursa)", issuer: "T.C. GSB & TÜBİTAK", category: "Havacılık & Otonom" },
+  { name: "İnsansız Hava Araçlarına Giriş Eğitimi", issuer: "BTK Akademi", category: "Havacılık & Otonom" },
+  { name: "TUA Astro Hackathon (15 Açık Kaynak Proje)", issuer: "Türkiye Uzay Ajansı (TUA)", category: "Havacılık & Otonom" },
+  { name: "Ankara AI Hackathon '26 (Aura Hockey AR)", issuer: "BTK Akademi & Teknopark Ankara", category: "Havacılık & Otonom" },
   { name: "Sualtı Sistemleri Eğitimi", issuer: "T3 Vakfı", category: "Havacılık & Otonom" },
   { name: "INTERSTELLAR PROBLEM SOLVER", issuer: "Türkiye Uzay Ajansı (TUA)", category: "Havacılık & Otonom" },
   { name: "ROTAMIZ UFKUN ÖTESİ", issuer: "KTÜ GEMİDTEK", category: "Havacılık & Otonom" },

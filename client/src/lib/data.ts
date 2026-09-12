@@ -9,7 +9,7 @@ export const profileData = {
     title: "AI Developer · UAV Systems Architect · Embedded Systems",
     email: "bahattinyunuscetin@hotmail.com",
     bio: `Ağustos 2023'te öz disiplinle yazılım yolculuğuna başlayan, Otonom Sistemler (ROS2) ve Büyük Dil Modeli (LLM) mimarileri üzerine yoğunlaşan bir geliştirici ve teknoloji girişimcisiyim. Python (PyTorch/TensorFlow) ve C++17/20 hibrit teknoloji yığını üzerinde uzmanlaşırken; donanım entegrasyonu, gömülü sistemler ve saha operasyonlarını da bizzat yürütüyorum. Savunma ve Otonom Araç sektörlerine yönelik kritik çözümler üretmeyi hedefliyorum.`,
-    tagline: "AI Developer · UAV Systems Architect · Embedded Systems | Founder @ Tulpar Aero-Dynamics, Arkıl Games, MERL, Budak & Anka",
+    tagline: "AI Developer · UAV Systems Architect · Embedded Systems | Founder @ Arat Labs, Tulpar Aero, Arkıl, MERL, Budak & Anka",
     avatar_url: "/images/ai-avatar.jpg",
     github_url: "https://github.com/arch-yunus",
     linkedin_url: "https://www.linkedin.com/in/bahattinyunus",
@@ -18,6 +18,7 @@ export const profileData = {
   github_stats: {
     public_repos: 231,
     followers: 2063,
+    linkedin_followers: 12644,
     following: 18,
     total_stars: 1500,
     total_forks: 450
@@ -48,6 +49,21 @@ export const profileData = {
     ]
   },
   ventures: [
+    {
+      name: "Arat Labs",
+      role: "Kurucu & Baş Yazılım Mühendisi",
+      period: "Ocak 2026 – Günümüz",
+      category: "AI / Complex Systems / R&D",
+      tagline: "Next-Gen AI Architectures & Complex Systems Engineering",
+      description: "Yapay zeka, veri yapıları ve algoritmalar, otonom sistemler ve asimetrik yazılım mimarileri üzerine Ar-Ge yürüten derin teknoloji laboratuvarı.",
+      highlights: [
+        "İleri seviye veri yapıları ve algoritmik verimlilik mühendisliği",
+        "Otonom karar verici AI sistemleri ve dağıtık veri işleme hatları",
+        "Karmaşık sistem mimarileri ve donanım-yazılım entegrasyonu"
+      ],
+      stack: ["Python", "C++20", "PyTorch", "Data Structures", "Complex Systems"],
+      icon: "Brain"
+    },
     {
       name: "Tulpar Aero-Dynamics",
       role: "Kurucu & Baş Teknoloji Mimarı",
@@ -183,11 +199,39 @@ export const profileData = {
       icon: "Plane"
     },
     {
-      title: "Havacılık ve Uzay Keşif Kampı",
-      issuer: "TÜBİTAK",
-      badge: "Uzay ve Havacılık",
+      title: "6. Dönem Havacılık Motorları Okulu",
+      issuer: "TEI - TUSAŞ Motor Sanayii A.Ş.",
+      badge: "Gaz Türbinli Motorlar & İmalat",
+      category: "Havacılık Motorları",
+      icon: "Cpu"
+    },
+    {
+      title: "KAMP+ Havacılık ve Uzay Kampı (Bursa)",
+      issuer: "T.C. GSB & TÜBİTAK",
+      badge: "Radyo Astronomi & FezaArsivi",
       category: "Uzay Bilimleri",
       icon: "Rocket"
+    },
+    {
+      title: "KAMP+ Siber Güvenlik Kampı",
+      issuer: "T.C. GSB & Bilgi Güvenliği Derneği",
+      badge: "Pentest, SOC & Adli Bilişim",
+      category: "Siber Savunma",
+      icon: "Shield"
+    },
+    {
+      title: "TUA Astro Hackathon (15 Açık Kaynak Proje)",
+      issuer: "Türkiye Uzay Ajansı (TUA)",
+      badge: "Derin Uzay & CubeSat Mimarileri",
+      category: "Uzay Görevleri",
+      icon: "Orbit"
+    },
+    {
+      title: "Ankara AI Hackathon '26 (Aura Hockey AR)",
+      issuer: "BTK Akademi & Teknopark Ankara",
+      badge: "MediaPipe & Three.js 3D Engine",
+      category: "Yapay Zeka & AR",
+      icon: "Sparkles"
     },
     {
       title: "Sualtı Sistemleri Eğitimi",
@@ -195,13 +239,6 @@ export const profileData = {
       badge: "Otonom Sualtı / ROV",
       category: "Otonom Araçlar",
       icon: "Anchor"
-    },
-    {
-      title: "INTERSTELLAR PROBLEM SOLVER",
-      issuer: "Türkiye Uzay Ajansı (TUA)",
-      badge: "Uzay Görev Mimarisi",
-      category: "Uzay Görevleri",
-      icon: "Orbit"
     },
     {
       title: "ROTAMIZ UFKUN ÖTESİ",
@@ -212,6 +249,20 @@ export const profileData = {
     }
   ],
   blog_posts: [
+    {
+      title: "Yapay Zeka Çağında Disiplinlerarası Uzmanlığın Yükselişi",
+      summary: "Her Şeyi Bilen Sistemleri Kim Yönetecek? Bilginin metalaşması, polimat profilinin dönüşü ve Meta-Mühendisler.",
+      url: "https://www.linkedin.com/pulse/yapay-zeka-%C3%A7a%C4%9F%C4%B1nda-disiplinleraras%C4%B1-uzmanl%C4%B1%C4%9F%C4%B1n-y%C3%BCkseli%C5%9Fi-%C3%A7eti%CC%87n-qdxwf/",
+      image: "/images/blog/paradigma.jpg",
+      date: "3 ay önce"
+    },
+    {
+      title: "Yapay Zeka Çağında Hayatta Kalmak: Junior Yazılımcıların %99'u Neden Sektörü Bırakacak?",
+      summary: "AI Agents & Solopreneur dönemi. Rutin kodlamadan fiziksel dünyayla (donanım/mekatronik) birleşen kopyalanamaz sistemlere geçiş.",
+      url: "https://www.linkedin.com/pulse/yapay-zeka-%C3%A7a%C4%9F%C4%B1nda-hayatta-kalmak-junior-99u-neden-sekt%C3%B6r%C3%BC-%C3%A7eti%CC%87n-h6ynf/",
+      image: "/images/blog/agi.jpg",
+      date: "6 ay önce"
+    },
     {
       title: "2026’ya Doğru Yazılım ve Siber Güvenlikte Paradigma Değişimi",
       summary: "Teknolojik Dönüşüm ve İş Gücünün Geleceği: Hayatta Kalma Reçetesi",
@@ -246,13 +297,6 @@ export const profileData = {
       url: "https://medium.com/@archyunus/g%C3%B6ky%C3%BCz%C3%BCndeki-sessiz-tehdit-t%C3%BCrkiye-hava-sahas%C4%B1nda-i%CC%87ha-hareketlili%C4%9Fi-ve-geni%C5%9Fleyen-sava%C5%9F%C4%B1n-yeni-952385656565",
       image: "/images/blog/iha.jpg",
       date: "25 Aralık 2025"
-    },
-    {
-      title: "2026’da Finansal Özgürlüğün Anahtarı",
-      summary: "Ustalaşmanız Gereken 7 Yapay Zeka Becerisi ve Yeni Bir Çağın Eşiğinde 'Süper Birey' Dönemi",
-      url: "https://medium.com/@archyunus/2026da-finansal-%C3%B6zg%C3%BCrl%C3%BC%C4%9F%C3%BCn-anahtar%C4%B1-ustala%C5%9Fman%C4%B1z-gereken-7-yapay-zeka-becerisi-852365456565",
-      image: "/images/blog/finans.jpg",
-      date: "23 Aralık 2025"
     }
   ],
   timeline: [
