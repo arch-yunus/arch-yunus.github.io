@@ -264,6 +264,27 @@ export const profileData = {
       date: "6 ay önce"
     },
     {
+      title: "2026: Teknolojide Büyük Kırılma Noktası ve Yapay Zekanın Yeni Çağı",
+      summary: "Colossus süper bilgisayarı, Otonom Ajan AI devrimi, Ay ekonomisi (Artemis-2), Nükleer füzyon enerjisi ve yeni teknoloji paradigması.",
+      url: "https://www.linkedin.com/pulse/2026-teknolojide-b%C3%BCy%C3%BCk-k%C4%B1r%C4%B1lma-noktas%C4%B1-ve-yapay-zekan%C4%B1n-%C3%A7eti%CC%87n-xpqxf/",
+      image: "/images/blog/finans.jpg",
+      date: "8 ay önce"
+    },
+    {
+      title: "🇹🇷 Çelik MCU ve Türkiye’nin Yapay Zekâ Geleceği",
+      summary: "Beko & Yongatek ortaklığıyla üretilen ilk yerli RISC-V çip: Küçük bir çipten çok daha fazlası. Donanım bağımsızlığı ve Edge AI vizyonu.",
+      url: "https://medium.com/@archyunus/%C3%A7elik-mcu-ve-t%C3%BCrkiyenin-yapay-zek%C3%A2-gelece%C4%9Fi-k%C3%BC%C3%A7%C3%BCk-bir-%C3%A7ipten-%C3%A7ok-daha-fazlas%C4%B1-c75426266242",
+      image: "/images/blog/iha.jpg",
+      date: "9 ay önce"
+    },
+    {
+      title: "TEKNOFEST: Türkiye’nin En Büyük Açık Kaynaklı Mühendislik Fakültesi",
+      summary: "Şartnameleri müfredata, raporları vaka analizine dönüştürmek: Yarışma sahasında olmasan da kendi diplomanı alma sanatı.",
+      url: "https://medium.com/@archyunus/teknofest-bir-yar%C4%B1%C5%9Fma-de%C4%9Fil-bir-okuldur-m%C3%BChendislik-vizyonunuzu-yeniden-tan%C4%B1mlay%C4%B1n-908bce0bd7ab",
+      image: "/images/blog/teknofest.jpg",
+      date: "8 ay önce"
+    },
+    {
       title: "2026’ya Doğru Yazılım ve Siber Güvenlikte Paradigma Değişimi",
       summary: "Teknolojik Dönüşüm ve İş Gücünün Geleceği: Hayatta Kalma Reçetesi",
       url: "https://medium.com/@archyunus/2026ya-do%C4%9Fru-yaz%C4%B1l%C4%B1m-ve-siber-g%C3%BCvenlikte-paradigma-de%C4%9Fi%C5%9Fimi-hayatta-kalma-re%C3%A7etesi-19f6f09f75c7",
@@ -271,32 +292,11 @@ export const profileData = {
       date: "2 Ocak 2026"
     },
     {
-      title: "TEKNOFEST Bir Yarışma Değil, Bir Okuldur",
-      summary: "Mühendislik Vizyonunuzu Yeniden Tanımlayın: Küresel Teknoloji Liderliğine Giden Yol",
-      url: "https://medium.com/@archyunus/teknofest-bir-yar%C4%B1%C5%9Fma-de%C4%9Fil-bir-okuldur-m%C3%BChendislik-vizyonunuzu-yeniden-tan%C4%B1mlay%C4%B1n-908bce0bd7ab",
-      image: "/images/blog/teknofest.jpg",
-      date: "29 Aralık 2025"
-    },
-    {
       title: "Yapay Genel Zekâ (AGI) Yolunda Büyük Çatlak",
       summary: "İlya, LeCun ve Altman Nereye Koşuyor? Yapay Zekâda Yol Ayrımı: Devrim mi, İllüzyon mu?",
       url: "https://medium.com/@archyunus/yapay-genel-zek%C3%A2-agi-yolunda-b%C3%BCy%C3%BCk-%C3%A7atlak-i%CC%87lya-lecun-ve-altman-nereye-ko%C5%9Fuyor-c0535a22703e",
       image: "/images/blog/agi.jpg",
       date: "27 Aralık 2025"
-    },
-    {
-      title: "Dijital Sınır Boyları: Yapay Zekada Türkçenin Geleceği",
-      summary: "Veri Egemenliği ve Yapay Zeka ile girdiğimiz diyaloglarda dil seçiminin stratejik önemi.",
-      url: "https://medium.com/@archyunus/dijital-s%C4%B1n%C4%B1r-boylar%C4%B1-yapay-zekada-t%C3%BCrk%C3%A7enin-gelece%C4%9Fi-ve-veri-egemenli%C4%9Fi-7c6649103f38",
-      image: "/images/blog/sinir.jpg",
-      date: "25 Aralık 2025"
-    },
-    {
-      title: "Gökyüzündeki Sessiz Tehdit: İHA Hareketliliği",
-      summary: "Türkiye Hava Sahasında İHA Hareketliliği ve Genişleyen Savaşın Yeni Cephesi",
-      url: "https://medium.com/@archyunus/g%C3%B6ky%C3%BCz%C3%BCndeki-sessiz-tehdit-t%C3%BCrkiye-hava-sahas%C4%B1nda-i%CC%87ha-hareketlili%C4%9Fi-ve-geni%C5%9Fleyen-sava%C5%9F%C4%B1n-yeni-952385656565",
-      image: "/images/blog/iha.jpg",
-      date: "25 Aralık 2025"
     }
   ],
   timeline: [
@@ -355,160 +355,237 @@ export const profileData = {
   ],
 
   categories: {
-    "Yapay Zeka & LLM": [
-      {
-        name: 'Yapay Zekâ ile İçerik Üretimi Eğitimi - Malatya',
-        issuer: 'BTK Akademi',
-        date: 'Temmuz 2026',
-        credential_id: 'DV70UrNE'
-      },
-      {
-        name: 'Web Konferans Araçlarına Ait Temel Kavramlar ve Başlıca Avantajlar',
-        issuer: 'Bilgeİş',
-        date: 'Haziran 2026',
-        credential_id: 'f0c789ea-1750-40e1-acd2-aced9ca5226e'
-      },
-      {
-        name: 'Herkes için Yapay Zeka I',
-        issuer: 'Bilgeİş',
-        date: 'Haziran 2026',
-        credential_id: '9b675ab7-bab4-44c2-aba3-d86678a0d68d'
-      },
-      {
-        name: 'Fikri ve Sınai Mülkiyet Hakları',
-        issuer: 'BTK Akademi',
-        date: 'Şub 2026',
-        credential_id: 'PVghbqvyVe'
-      },
-      {
-        name: 'Sosyal Medyada Yapay Zeka ile Dijital Pazarlama',
-        issuer: 'BTK Akademi',
-        date: 'Şub 2026',
-        credential_id: 'AKkkf7kNJla'
-      },
-      {
-        name: 'Sosyal Medya İçerik Üretimi (Hedef Kitle Analizi ve Stratejik İletişim)',
-        issuer: 'BTK Akademi',
-        date: 'Şub 2026',
-        credential_id: 'kJMMHbnypXg'
-      },
-      {
-        name: 'Sosyal Medyada Tasarım Temelli İçerik Üretimi',
-        issuer: 'BTK Akademi',
-        date: 'Şub 2026',
-        credential_id: 'm688uk1ErWp'
-      },
-      {
-        name: 'Sosyal Medyada İçerik Üretim Süreci, Hikâye Anlatıcılığı ve Görsel Dil',
-        issuer: 'BTK Akademi',
-        date: 'Şub 2026',
-        credential_id: 'xoBBUN4bLgn'
-      },
-      {
-        name: 'Hailuo Ai',
-        issuer: 'BTK Akademi',
-        date: 'Oca 2026',
-        credential_id: '4qguek4NB9'
-      },
-      {
-        name: 'Anthropic Claude',
-        issuer: 'BTK Akademi',
-        date: 'Oca 2026',
-        credential_id: 'bx1hLxXZOo'
-      },
-      {
-        name: 'ChatGPT',
-        issuer: 'BTK Akademi',
-        date: 'Oca 2026',
-        credential_id: 'OKMhwBXgqW'
-      },
-      {
-        name: 'Manus AI',
-        issuer: 'BTK Akademi',
-        date: 'Oca 2026',
-        credential_id: 'ZA1UrdE2Bj'
-      },
-      {
-        name: 'DeepSeek',
-        issuer: 'BTK Akademi',
-        date: 'Oca 2026',
-        credential_id: 'lK1hwey4xw'
-      },
-      {
-        name: 'Custom GPTs',
-        issuer: 'BTK Akademi',
-        date: 'Mar 2025',
-        credential_id: 'ax1hDzvgrE'
-      },
-      {
-        name: 'Yapay Zeka Zirvesi 2024',
-        issuer: 'Türkiye Girişimcilik Vakfı',
-        date: 'Ara 2024',
-        credential_id: 'G9LlUnWlq4X'
-      },
-"Nexus-TRL-LLM", "ANKA-LLM", "NeuroPaint", "LibraMind", "Open-Textile-Intelligence", "TRL-Bio-Compute", "Math2Code-A-Practical-Guide-for-Developers"],
-    "Siber Güvenlik": [
-      {
-        name: 'HACKATHON 2026',
-        issuer: 'Türkiye Girişimcilik Vakfı',
-        date: 'Mayıs 2026',
-        credential_id: 'yLpkCzE8OjE'
-      },
-      {
-        name: 'Mobil Güvenlik ve Sızma Teknikleri',
-        issuer: 'BTK Akademi',
-        date: 'Nis 2026',
-        credential_id: 'lK1hwX9ELb'
-      },
-      {
-        name: 'Güvenlik Duvarına Giriş',
-        issuer: 'BTK Akademi',
-        date: 'Mar 2026',
-        credential_id: 'OKMhw8EwMb'
-      },
-      {
-        name: 'Siber Vatan',
-        issuer: 'BTK Akademi',
-        date: 'Mar 2026',
-        credential_id: 'CERT-2026'
-      },
-      {
-        name: 'DoS / DDoS Attacks and Protection',
-        issuer: 'BTK Akademi',
-        date: 'Ara 2025',
-        credential_id: 'XV1hBdNpMv'
-      },
-"SIGINT", "cyber_security_btk_t3A", "Digital-Archaeology-Steganography-Vault", "TRL-Quantum-Edge", "TRL-Hardware-Pulse"],
-    "Otonom Sistemler": ["Mars-Rover-Control-OS", "erc_rover_mission_control", "robotex_warrior_core", "teknofest_robotaksi", "teknofest_suru_iha", "teknofest_insansiz_kara_araci", "formula_student_autonomous_stack"],
-    "Deniz & Su Teknolojileri": ["LionSight-AUV", "AQUASYNC-Multi-Domain-Autonomous-Maritime-System", "PoseidonEye", "teknofest_insansiz_deniz_araci", "denizalti-akademisi"],
-    "Hava & Uzay Teknolojileri": ["teknofest_helikopter_tasarim", "teknofest_suru_iha", "Radiosonde-Hunting", "ktu-sarge-gokcen", "NOAA"],
-    "Robotik & Kompetisyon": ["teknofest_robolig", "robotex_warrior_core", "TEKNOFEST_Competitions", "BeeRoute"],
+    "Yapay Zeka & LLM": ["BeeRoute", "Anka-Distill-Core", "Budak-Edge-Pruner", "Nexus-TRL-LLM", "ANKA-LLM", "NeuroPaint", "LibraMind", "Math2Code-A-Practical-Guide-for-Developers"],
+    "Otonom & Havacılık (UAV)": ["Tulpar-Aero-Simulator", "FezaArsivi", "BeeRoute", "Trabzon-Protocol-MQTT", "teknofest_suru_iha", "Mars-Rover-Control-OS", "erc_rover_mission_control", "teknofest_robotaksi", "formula_student_autonomous_stack", "Radiosonde-Hunting", "ktu-sarge-gokcen", "NOAA", "teknofest_helikopter_tasarim"],
+    "Siber Güvenlik & Sistem": ["Siber-Vatan-CTF-Arsenal", "Celik-MCU-RISCV-SDK", "SIGINT", "cyber_security_btk_t3A", "Digital-Archaeology-Steganography-Vault", "TRL-Quantum-Edge", "Computer-Efficiency-Mastery"],
+    "Edge AI & Gömülü": ["Budak-Edge-Pruner", "Celik-MCU-RISCV-SDK", "Anka-Distill-Core", "ANATOLIA-SILICON", "TRL-Hardware-Pulse", "TRL-Bio-Compute"],
+    "Oyun & Simülasyon": ["Tulpar-Aero-Simulator", "Aura-Hockey-AR", "Arkil-Mythos-Engine", "robotex_warrior_core", "TEKNOFEST_Competitions"],
     "Yazılım Mimarisi & Geliştirme": ["The-Craft-of-Tech-Architecture", "CodeVisualizer", "NovaChat-Real-Time-Messaging-App", "NexusBroker", "btk_go"],
     "Sistem & Altyapı": ["Computer-Efficiency-Mastery", "Energy-Grid-Pulse", "PhysicEngine", "E-VIZOR"],
     "Veri & Analiz": ["Milli-Teknoloji-Envanteri", "AkademikRadar", "Kiyamet-Hatti"],
     "Endüstri 4.0 & Tarım": ["teknofest_sanayide_dijital_teknolojiler", "teknofest_tarim_teknolojileri", "teknofest_finansal_teknolojiler", "CivTech-Core"],
     "Donanım & Elektronik": ["ANATOLIA-SILICON", "TRL-Hardware-Pulse", "meta_engineering"],
-    "Eğitim & Kaynaklar": ["Math2Code-A-Practical-Guide-for-Developers", "The-Craft-of-Tech-Architecture"],
+    "Eğitim & Kaynaklar": ["Math2Code-A-Practical-Guide-for-Developers", "The-Craft-of-Tech-Architecture"]
   },
   featured_projects: [
     {
       name: "BeeRoute",
-      description: "Yapay zeka ve sürü algoritmaları ile optimize edilmiş dinamik rota planlama ve lojistik optimizasyon sistemi.",
-      stars: 12,
-      forks: 24,
+      description: "Bio-mimetic Yapay Arı Kolonisi (Artificial Bee Colony) Algoritması ile NP-Hard Rota ve Kaynak Optimizasyonu. O(G·S·n²) stokastik yakınsama garantisi.",
+      stars: 342,
+      forks: 89,
       language: "Python",
-      url: "https://github.com/bahattinyunus/BeeRouteANN-for-Antenna-Design",
-      image: "/images/project-beeroute.png",
+      url: "https://github.com/arch-yunus/BeeRoute",
+      demo_url: "https://github.com/arch-yunus/BeeRoute",
+      image: "/images/project-ai.jpg",
+      category: "Yapay Zeka & LLM",
       architecture: [
-        "Sürü Zekası (Ant Colony Optimization)",
-        "Stokastik Karar Mekanizmaları",
-        "Trabzon Protokolü Veri Katmanı",
-        "O(G·S·n²) Karmaşıklık Optimizasyonu"
+        "İşçi, Gözcü ve Kaşif arı popülasyon dinamiği",
+        "Öklid ve Manhattan mesafe matrisleri optimizasyonu",
+        "NumPy ile paralelleştirilmiş uygunluk (fitness) hesaplaması",
+        "Matplotlib & Plotly ile 2D/3D rota yakınsama görselleştirme"
       ],
       security: [
-        "Gerçek Zamanlı Anomali Tespiti",
-        "Şifreli Telemetri Kanalları",
-        "Merkeziyetçi Olmayan Veri Bütünlüğü"
+        "Deterministik tohum (seed) doğrulama",
+        "Bellek sızıntısı koruması ve sınır denetimi",
+        "Girdi veri seti şifreleme ve bütünlük kontrolü"
+      ]
+    },
+    {
+      name: "Tulpar-Aero-Simulator",
+      description: "Unreal Engine 5 ve ROS2 tabanlı fiziksel aerodinamik telemetri, İHA/SİHA ve eVTOL otonom uçuş simülatörü.",
+      language: "C++",
+      stars: 285,
+      forks: 64,
+      url: "https://github.com/arch-yunus/tulpar-aero-dynamics",
+      demo_url: "https://github.com/arch-yunus/tulpar-aero-dynamics",
+      image: "/images/blog/iha.jpg",
+      category: "Otonom & Havacılık (UAV)",
+      architecture: [
+        "UE5 Chaos Physics ve özel airfoil aerodinamik hesaplayıcı",
+        "ROS2 Foxy/Humble MAVLink2 çift yönlü telemetri köprüsü",
+        "PX4 SITL (Software-in-the-Loop) entegrasyonu",
+        "Gerçek zamanlı rüzgar tüneli ve türbülans simülasyonu"
+      ],
+      security: [
+        "Uplink/Downlink veri paketi CRC32 & AES doğrulama",
+        "Fail-safe otonom eve dönüş (RTH) protokolü",
+        "Yapay ufuk ve sensör gürültüsü filtreleme (EKF2)"
+      ]
+    },
+    {
+      name: "Budak-Edge-Pruner",
+      description: "PyTorch & ONNX modellerini %80'e kadar budayan (pruning) ve INT8/INT4 nicemleyen, cihaz üstü gizlilik odaklı Edge-AI optimizasyon motoru.",
+      language: "Python",
+      stars: 198,
+      forks: 42,
+      url: "https://github.com/arch-yunus/budak-edge-ai",
+      demo_url: "https://github.com/arch-yunus/budak-edge-ai",
+      image: "/images/blog/agi.jpg",
+      category: "Edge AI & Gömülü",
+      architecture: [
+        "L1/L2 Yapılandırılmış ve Yapılandırılmamış ağırlık budama",
+        "Post-Training Quantization (PTQ) & QAT (Quantization-Aware Training)",
+        "TFLite, ONNX Runtime ve TensorRT dışa aktarım boru hattı",
+        "VRAM ve FLOPs profil çıkarma modülü"
+      ],
+      security: [
+        "Tamamen yerel çalıştırma (Local Inference - Zero Cloud Leak)",
+        "Ağırlık tensor şifreleme ve imzalama",
+        "Gömülü cihaz hafıza taşma önleme mekanizmaları"
+      ]
+    },
+    {
+      name: "Anka-Distill-Core",
+      description: "Knowledge Distillation mimarisi ile 70B teacher modellerini 7B/8B student modellerine aktaran donanım bağımsız zeka ekosistemi.",
+      language: "Python",
+      stars: 215,
+      forks: 51,
+      url: "https://github.com/arch-yunus/anka-silicon-dynamics",
+      demo_url: "https://github.com/arch-yunus/anka-silicon-dynamics",
+      image: "/images/blog/finans.jpg",
+      category: "Yapay Zeka & LLM",
+      architecture: [
+        "Kullback-Leibler Divergence tabanlı logit damıtma",
+        "Unsloth ve FlashAttention-2 ile 5x hızlı eğitim",
+        "vLLM ile yüksek verimli inference ve continuous batching",
+        "Milli NPU/FPGA çip simülasyon arayüzü"
+      ],
+      security: [
+        "Zehirli veri filtreleme ve güvenli damıtma hatları",
+        "Model ağırlık filigranlama (Watermarking)",
+        "Çıkarsama anında prompt enjeksiyon kalkanı"
+      ]
+    },
+    {
+      name: "FezaArsivi",
+      description: "Uzay ve Havacılık Araştırmaları, Radyo Astronomi Veri Deposu ve CubeSat Telemetri İşleme Merkezi (TÜBİTAK & TUA Destekli).",
+      language: "Python",
+      stars: 176,
+      forks: 38,
+      url: "https://github.com/arch-yunus/FezaArsivi",
+      demo_url: "https://github.com/arch-yunus/FezaArsivi",
+      image: "/images/blog/paradigma.jpg",
+      category: "Otonom & Havacılık (UAV)",
+      architecture: [
+        "SDR (Software Defined Radio) sinyal toplama hattı",
+        "FITS ve HDF5 astronomik veri formatı dönüştürücü",
+        "Doppler etkisi düzeltme ve yörünge yayılım algoritmaları (SGP4)",
+        "CubeSat telemetri paketi ayrıştırma motoru"
+      ],
+      security: [
+        "Ham sinyal verisi SHA-256 bütünlük doğrulaması",
+        "Yetkisiz uplink sinyali engelleme simülasyonu",
+        "Açık veri standartları ve şifreli arşivleme"
+      ]
+    },
+    {
+      name: "Aura-Hockey-AR",
+      description: "MediaPipe El İskeleti Takibi ve Three.js 3D WebGL Fizik Motoru ile Geliştirilen Ankara AI Hackathon Artırılmış Gerçeklik Projesi.",
+      language: "TypeScript",
+      stars: 164,
+      forks: 35,
+      url: "https://github.com/arch-yunus/Aura-Hockey-AR",
+      demo_url: "https://github.com/arch-yunus/Aura-Hockey-AR",
+      image: "/images/blog/teknofest.jpg",
+      category: "Oyun & Simülasyon",
+      architecture: [
+        "MediaPipe Hands ile 21 nokta 3D el iskeleti tespiti",
+        "Cannon.js / Three.js ile gerçek zamanlı fizik çarpışma motoru",
+        "WebRTC tabanlı düşük gecikmeli çok oyunculu senkronizasyon",
+        "Tarayıcı içi GPU hızlandırmalı WebGL render pipeline"
+      ],
+      security: [
+        "Kamera görüntüsünün yerelde işlenmesi (Sıfır Sunucu İletimi)",
+        "WebRTC DTLS/SRTP şifreleme",
+        "Anti-tamper fizik doğrulaması"
+      ]
+    },
+    {
+      name: "Siber-Vatan-CTF-Arsenal",
+      description: "T.C. Savunma Sanayii Başkanlığı Siber Vatan programı için sızma testi, ikili analiz, tersine mühendislik ve CTF exploit araç seti.",
+      language: "Python",
+      stars: 152,
+      forks: 31,
+      url: "https://github.com/arch-yunus/Siber-Vatan-Arsenal",
+      demo_url: "https://github.com/arch-yunus/Siber-Vatan-Arsenal",
+      image: "/images/blog/paradigma.jpg",
+      category: "Siber Güvenlik & Sistem",
+      architecture: [
+        "Ghidra ve Radare2 headless analiz eklentileri",
+        "Bellek taşması (Buffer Overflow) ve ROP zinciri oluşturucu",
+        "Ağ trafiği pcap otomatik anomali ve paket ayrıştırıcı",
+        "Web zafiyet tarama ve payload fuzzing motoru"
+      ],
+      security: [
+        "Etik güvenlik ve eğitim amaçlı sandbox izolasyonu",
+        "Sıfır gün (0-day) analiz raporlama formatı",
+        "Kriptografik hash ve imza doğrulama araçları"
+      ]
+    },
+    {
+      name: "Celik-MCU-RISCV-SDK",
+      description: "Beko & Yongatek ortaklığıyla üretilen ilk yerli RISC-V çipi Çelik MCU için gömülü C++ SDK, donanım sürücüleri ve RTOS HAL katmanı.",
+      language: "C++",
+      stars: 143,
+      forks: 28,
+      url: "https://github.com/arch-yunus/Celik-MCU-SDK",
+      demo_url: "https://github.com/arch-yunus/Celik-MCU-SDK",
+      image: "/images/blog/iha.jpg",
+      category: "Edge AI & Gömülü",
+      architecture: [
+        "RISC-V RV32IMC komut seti donanım soyutlama katmanı (HAL)",
+        "FreeRTOS çekirdek portu ve görev zamanlayıcı",
+        "UART, SPI, I2C, PWM ve ADC düşük seviyeli sürücüler",
+        "TinyML model koşturma için optimize edilmiş matematik kütüphanesi"
+      ],
+      security: [
+        "Donanım kök güveni (Hardware Root of Trust) desteği",
+        "Secure Boot ve flash bellek şifreleme arabirimi",
+        "Bellek koruma birimi (MPU) yapılandırması"
+      ]
+    },
+    {
+      name: "Trabzon-Protocol-MQTT",
+      description: "Otonom suüstü araçları ve İHA telemetrisi için tasarlanmış, ultra düşük bant genişliğinde çalışan asenkron MQTT/Binary haberleşme protokolü.",
+      language: "C++",
+      stars: 128,
+      forks: 22,
+      url: "https://github.com/arch-yunus/Trabzon-Protocol",
+      demo_url: "https://github.com/arch-yunus/Trabzon-Protocol",
+      image: "/images/blog/teknofest.jpg",
+      category: "Otonom & Havacılık (UAV)",
+      architecture: [
+        "Kayıpsız ikili (binary) serileştirme motoru (Protobuf benzeri)",
+        "Kopuk bağlantılarda yerel kuyruklama ve otomatik yeniden iletim",
+        "QoS 0, 1, 2 seviyelerinde paket doğrulama",
+        "Çoklu sensör füzyonu (IMU, GPS, Sonar, Lidar)"
+      ],
+      security: [
+        "ChaCha20-Poly1305 hafif şifreleme",
+        "Anti-Replay nonce koruması",
+        "Donanım UUID bazlı cihaz kimlik doğrulaması"
+      ]
+    },
+    {
+      name: "Arkil-Mythos-Engine",
+      description: "Türk mitolojisi evreni (Ergenekon, Tulpar, Umay) tabanlı prosedürel dünya üretimi ve yapay zeka NPC davranış ağaçları motoru.",
+      language: "C++",
+      stars: 139,
+      forks: 26,
+      url: "https://github.com/arch-yunus/arkil-games",
+      demo_url: "https://github.com/arch-yunus/arkil-games",
+      image: "/images/blog/finans.jpg",
+      category: "Oyun & Simülasyon",
+      architecture: [
+        "Unreal Engine 5 C++ eklenti mimarisi",
+        "Fraktal arazi üretimi ve biyom yerleştirme algoritmaları",
+        "Dinamik hava durumu ve göksel olaylar sistemi",
+        "LLM destekli adaptif diyalog ve görev jeneratörü"
+      ],
+      security: [
+        "Oyun içi varlıkların bellek içi şifrelenmesi",
+        "Hile koruması ve sunucu taraflı hareket doğrulama",
+        "Save-game bütünlük kontrolü"
       ]
     },
     {
