@@ -100,9 +100,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                                     href={project.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex-1 min-w-[200px] px-8 py-4 bg-neon-blue text-black font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-white transition-all flex items-center justify-center gap-2"
+                                    className="flex-1 min-w-[180px] px-6 py-3.5 bg-neon-blue text-black font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-white transition-all flex items-center justify-center gap-2 text-sm"
                                 >
                                     ACCESS_REPOSITORY <ExternalLink className="w-4 h-4" />
+                                </a>
+                                <a
+                                    href={(project as any).demo_url || project.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 min-w-[180px] px-6 py-3.5 border border-neon-green/50 bg-neon-green/10 text-neon-green font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-neon-green hover:text-black transition-all flex items-center justify-center gap-2 text-sm"
+                                >
+                                    CANLI_DEMO <Zap className="w-4 h-4" />
                                 </a>
                             </div>
                         </div>

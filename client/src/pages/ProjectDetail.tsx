@@ -29,8 +29,11 @@ export default function ProjectDetail() {
           <div className="section-eyebrow">{project.language} · Açık kaynak proje</div>
           <h1 className="mt-5 text-5xl font-semibold leading-[.98] tracking-tight md:text-7xl">{project.name}</h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-white/55">{project.description}</p>
-          <div className="hero-actions">
+          <div className="hero-actions flex flex-wrap gap-4 mt-6">
             <a href={project.url} target="_blank" rel="noreferrer" className="button-primary">GitHub'da incele <Github size={16} /></a>
+            <a href={(project as any).demo_url || project.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[#b9f36b]/40 bg-[#b9f36b]/10 px-6 py-3 font-mono text-sm font-semibold text-[#b9f36b] hover:bg-[#b9f36b] hover:text-black transition-all">
+              Canlı Demo / Sistem <ArrowUpRight size={16} />
+            </a>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 font-mono text-xs text-white/45"><span className="h-2 w-2 rounded-full bg-[#b9f36b]" /> Aktif kayıt</span>
           </div>
         </motion.div>
