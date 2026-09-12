@@ -98,6 +98,52 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* 5 Flagship Ventures Showcase */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between pb-2 border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-neon-blue animate-ping" />
+            <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white tracking-wide">
+              VENTURES & AR-GE MİMARİLERİ
+            </h3>
+          </div>
+          <span className="text-xs font-mono text-white/40">5 AKTİF İNOVASYON EKOSİSTEMİ</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {profileData.ventures.map((venture, idx) => (
+            <div
+              key={idx}
+              className="p-5 rounded-xl border border-white/10 bg-white/[0.03] hover:border-neon-blue/40 hover:bg-neon-blue/[0.04] transition-all group relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-neon-blue border border-white/5">
+                  {venture.category}
+                </span>
+                <span className="text-[10px] font-mono text-white/40">{venture.period}</span>
+              </div>
+
+              <h4 className="text-lg font-bold text-white group-hover:text-neon-blue transition-colors mt-3">
+                {venture.name}
+              </h4>
+              <p className="text-xs font-mono text-emerald-400 mt-0.5">{venture.role}</p>
+              
+              <p className="text-xs text-white/60 font-mono mt-3 leading-relaxed line-clamp-3">
+                {venture.description}
+              </p>
+
+              <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-white/5">
+                {venture.stack.slice(0, 3).map((st) => (
+                  <span key={st} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+                    {st}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Flagship Direct Jump Pills */}
       <div className="p-4 bg-white/5 border border-white/10 rounded-lg flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-xs font-mono text-neon-blue">
@@ -105,14 +151,17 @@ export default function Home() {
           <span>TACTICAL_PRIORITIES:</span>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Link href="/doctrine" className="px-3 py-1 bg-black/60 hover:bg-neon-blue/10 border border-white/10 hover:border-neon-blue/50 text-xs font-mono text-white/80 hover:text-neon-blue rounded transition-all">
+          <Link href="/arsenal" className="px-3 py-1 bg-black/60 hover:bg-neon-blue/10 border border-white/10 hover:border-neon-blue/50 text-xs font-mono text-white/80 hover:text-neon-blue rounded transition-all">
+            TULPAR // UAV FLIGHT DECK
+          </Link>
+          <Link href="/arsenal" className="px-3 py-1 bg-black/60 hover:bg-yellow-500/10 border border-white/10 hover:border-yellow-500/50 text-xs font-mono text-white/80 hover:text-yellow-500 rounded transition-all">
+            BUDAK // %80 PRUNING LAB
+          </Link>
+          <Link href="/doctrine" className="px-3 py-1 bg-black/60 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 text-xs font-mono text-white/80 hover:text-neon-green rounded transition-all">
             ANKA_SILICON // DISTILLATION
           </Link>
-          <Link href="/operations/beeroute" className="px-3 py-1 bg-black/60 hover:bg-neon-green/10 border border-white/10 hover:border-neon-green/50 text-xs font-mono text-white/80 hover:text-neon-green rounded transition-all">
-            BEEROUTE // NP-HARD
-          </Link>
-          <Link href="/intelligence" className="px-3 py-1 bg-black/60 hover:bg-yellow-500/10 border border-white/10 hover:border-yellow-500/50 text-xs font-mono text-white/80 hover:text-yellow-500 rounded transition-all">
-            SIBER_VATAN // ZERO-TRUST
+          <Link href="/intelligence" className="px-3 py-1 bg-black/60 hover:bg-sky-500/10 border border-white/10 hover:border-sky-500/50 text-xs font-mono text-white/80 hover:text-sky-500 rounded transition-all">
+            120+ SERTİFİKA KASASI
           </Link>
         </div>
       </div>
@@ -172,11 +221,11 @@ export default function Home() {
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-4 pt-6">
         <Link href="/operations" className="px-8 py-4 bg-neon-blue text-black font-bold font-[family-name:var(--font-display)] tracking-wider hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all flex items-center gap-2">
-          INITIATE PROTOCOLS <ArrowRight className="w-4 h-4" />
+          OPERASYONLARI İNCELE <ArrowRight className="w-4 h-4" />
         </Link>
 
         <a href={profileData.personal.github_url} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white/20 text-white font-mono tracking-wider hover:bg-white/10 transition-all flex items-center gap-2">
-          GITHUB LINK <ExternalLink className="w-4 h-4" />
+          GITHUB REPOLARI ({profileData.github_stats.public_repos}) <ExternalLink className="w-4 h-4" />
         </a>
       </div>
 

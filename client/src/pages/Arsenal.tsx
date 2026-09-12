@@ -1,16 +1,18 @@
 // @ts-nocheck
 import { profileData } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Terminal, Shield, Layers, Zap, Network, Server, Lock, Activity, CheckCircle2, ChevronRight } from "lucide-react";
+import { Cpu, Terminal, Shield, Layers, Zap, Network, Server, Lock, Activity, CheckCircle2, ChevronRight, Plane } from "lucide-react";
 import { useState } from "react";
 import { useVault } from "@/contexts/VaultContext";
 import { SkillHexGrid } from "@/components/cyber-ui/SkillHexGrid";
 import { useCyberSound } from "@/hooks/use-cyber-sound";
+import { TulparFlightDeck } from "@/components/cyber-ui/TulparFlightDeck";
+import { BudakEdgeLab } from "@/components/cyber-ui/BudakEdgeLab";
 
 export default function Arsenal() {
     const { isSecureMode } = useVault();
     const { playSound } = useCyberSound();
-    const [selectedTab, setSelectedTab] = useState<'all' | 'ai' | 'systems' | 'security' | 'architecture'>('all');
+    const [selectedTab, setSelectedTab] = useState<'all' | 'tulpar' | 'budak' | 'ai' | 'systems' | 'architecture'>('all');
     const [activeBlueprintNode, setActiveBlueprintNode] = useState<number | null>(null);
 
     const blueprintNodes = [
@@ -81,6 +83,8 @@ export default function Arsenal() {
                 <div className="flex flex-wrap gap-2">
                     {[
                         { id: 'all', label: 'ALL_DOMAINS' },
+                        { id: 'tulpar', label: 'TULPAR_UAV_FLIGHT_DECK' },
+                        { id: 'budak', label: 'BUDAK_EDGE_AI_LAB' },
                         { id: 'ai', label: 'AI_&_DISTILLATION' },
                         { id: 'systems', label: 'LOW_LEVEL_&_SYSTEMS' },
                         { id: 'architecture', label: 'ARCHITECTURE_BLUEPRINT' }
@@ -101,6 +105,16 @@ export default function Arsenal() {
                     ))}
                 </div>
             </div>
+
+            {/* Tulpar Flight Deck Interactive HUD */}
+            {(selectedTab === 'all' || selectedTab === 'tulpar') && (
+                <TulparFlightDeck />
+            )}
+
+            {/* Budak Edge-AI Pruning Lab */}
+            {(selectedTab === 'all' || selectedTab === 'budak') && (
+                <BudakEdgeLab />
+            )}
 
             {/* Architecture Blueprint Section */}
             {(selectedTab === 'all' || selectedTab === 'architecture') && (

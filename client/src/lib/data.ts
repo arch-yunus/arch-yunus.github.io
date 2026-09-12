@@ -1,38 +1,19 @@
-import { Github, Linkedin, Mail, ExternalLink, Code2, Terminal, Cpu, Globe, Database, Shield, Brain, Layers, Book, Zap, Activity } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code2, Terminal, Cpu, Globe, Database, Shield, Brain, Layers, Book, Zap, Activity, Plane, Gamepad2, BrainCircuit, Rocket, Anchor, Compass, Orbit } from "lucide-react";
 
 export const profileData = {
   personal: {
-    name: "Bahattin Yunus Çetin",
-    username: "bahattinyunus",
-    location: "Türkiye",
-    company: "StarDev",
-    bio: `Ben Bahattin Yunus ÇETİN; Karadeniz Teknik Üniversitesi'nde Yazılım Mühendisliği öğrencisi, Anka Silicon Dynamics'in kurucusu ve dijital sınırların korunmasına adanmış bir Siber Vatanseverim. Kariyer yolculuğum, disiplinli bir operasyonel geçmişten teknik uzmanlığa uzanan asimetrik bir gelişim çizgisidir.
-    
-Bugün, yapay zeka sistemlerinin sadece kullanıcısı değil, mimarı olma vizyonuyla; LLM optimizasyonu, siber güvenlik ve karmaşık sistem mimarileri üzerine odaklanıyorum.
-
-🚀 Neler Yapıyorum?
-
-Anka Silicon Dynamics: Türkiye'nin yapay zeka alanındaki dijital egemenliğini tesis etmek amacıyla, "donanım bağımsız" bir zeka ekosistemi inşa ediyorum. Yerli donanımlar banttan çıkana kadar, düşük parametreli modelleri (7B/8B) devasa modellerin yetenekleriyle donatan Knowledge Distillation süreçlerini yönetiyorum.
-
-Stokastik Optimizasyon: NP-Hard problemlerine biyo-mimetik çözümler sunan, O(G·S·n²) karmaşıklıkta çalışan ve "Trabzon Protokolü" katmanını içeren BeeRoute projesiyle endüstriyel rotalama süreçlerini modernize ediyorum.
-
-Siber Güvenlik: T.C. Savunma Sanayii Başkanlığı ve Sanayi ve Teknoloji Bakanlığı himayesindeki Siber Vatan programı kapsamında, CTF dereceleriyle tescillenmiş teknik yetkinliğimle ulusal siber güvenlik vizyonuna katkı sağlıyorum.
-
-Derin Mühendislik: Mikroşerit anten tasarımından (DeepAntenna), denizcilikte AI destekli kestirimci bakıma (PoseidonEye) kadar geniş bir yelpazede, yapay sinir ağlarını (ANN) fizik ve mühendislik disiplinleriyle buluşturuyorum.
-
-🛠 Teknik Cephaneliğim
-AI & ML: PyTorch, HuggingFace, Unsloth, vLLM, QLoRA, Knowledge Distillation.
-Siber Güvenlik: Ethical Hacking, CTF, Tehdit Analizi, Sistem Dayanıklılığı.
-Yazılım & Mimari: Python (NumPy, SciPy), IoT (MQTT), Blockchain (Smart Contracts), Teknik Doktrin Oluşturma.
-
-🌐 Vizyonum
-Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; stratejik düşünen, etik değerlere bağlı ve küresel standartlarda teknoloji üreten bir mühendislik kültürü oluşturmayı hedefliyorum. Uzay araştırmalarından denizaltı savunma sistemlerine kadar, teknolojinin dokunduğu her alanda "tam bağımsızlık" ilkesini savunuyorum.`,
-    tagline: "Founder & Chief Architect @ Anka Silicon Dynamics & Budak | IT Architect, LLM & AI Systems",
+    name: "Yunus ÇETİN",
+    fullName: "Bahattin Yunus Çetin",
+    username: "arch-yunus",
+    location: "Ankara, Türkiye",
+    title: "AI Developer · UAV Systems Architect · Embedded Systems",
+    email: "bahattinyunuscetin@hotmail.com",
+    bio: `Ağustos 2023'te öz disiplinle yazılım yolculuğuna başlayan, Otonom Sistemler (ROS2) ve Büyük Dil Modeli (LLM) mimarileri üzerine yoğunlaşan bir geliştirici ve teknoloji girişimcisiyim. Python (PyTorch/TensorFlow) ve C++17/20 hibrit teknoloji yığını üzerinde uzmanlaşırken; donanım entegrasyonu, gömülü sistemler ve saha operasyonlarını da bizzat yürütüyorum. Savunma ve Otonom Araç sektörlerine yönelik kritik çözümler üretmeyi hedefliyorum.`,
+    tagline: "AI Developer · UAV Systems Architect · Embedded Systems | Founder @ Tulpar Aero-Dynamics, Arkıl Games, MERL, Budak & Anka",
     avatar_url: "/images/ai-avatar.jpg",
-    github_url: "https://github.com/bahattinyunus",
+    github_url: "https://github.com/arch-yunus",
     linkedin_url: "https://www.linkedin.com/in/bahattinyunus",
-    stardev_url: "https://www.stardev.io/developers/bahattinyunus",
-    medium_url: "https://medium.com/@bahattinyunus"
+    medium_url: "https://medium.com/@archyunus"
   },
   github_stats: {
     public_repos: 231,
@@ -42,139 +23,256 @@ Milli Teknoloji Hamlesi'nin bir neferi olarak, sadece kod yazmayı değil; strat
     total_forks: 450
   },
   skills: {
-    languages: ["Python", "C++", "JavaScript", "Go", "Rust"],
-    frameworks: ["TensorFlow", "PyTorch", "React", "Node.js", "Django"],
-    tools: ["Docker", "Kubernetes", "Git", "Linux", "AWS"],
+    core: [
+      "ROS2 / Robotik",
+      "Python · PyTorch",
+      "C++ 17/20",
+      "Edge AI / TFLite",
+      "LLM Mimarisi",
+      "RTOS / Gömülü",
+      "Unreal Engine 5",
+      "QLoRA · vLLM",
+      "Model Budama & Nicemleme",
+      "UAV / İHA Sistemleri"
+    ],
+    languages: ["Python", "C++17/20", "C", "Go", "Rust", "JavaScript", "TypeScript"],
+    frameworks: ["PyTorch", "TensorFlow", "ROS2", "Unreal Engine 5", "vLLM", "Unsloth", "TFLite", "FastAPI"],
+    tools: ["Docker", "Git/GitHub", "Linux/RTOS", "Proteus", "Tinkercad", "PX4", "Gazebo"],
     concepts: [
-      "Yapay Zeka & Makine Öğrenmesi",
-      "Siber Güvenlik",
-      "Sistem Mimarisi",
-      "Otonom Sistemler",
-      "IoT & Gömülü Sistemler"
+      "Otonom Uçuş & Havacılık Sistemleri",
+      "Büyük Dil Modelleri & Knowledge Distillation",
+      "Model Pruning (%80) & Quantization",
+      "Siber Güvenlik (Siber Vatan / White Hat)",
+      "Deterministik ve Stokastik Mühendislik Modelleri",
+      "Gömülü Sistemler & RTOS Donanım Entegrasyonu"
     ]
   },
+  ventures: [
+    {
+      name: "Tulpar Aero-Dynamics",
+      role: "Kurucu & Baş Teknoloji Mimarı",
+      period: "Nisan 2026 – Günümüz",
+      category: "Aero / UAV / Simulation",
+      tagline: "Autonomous UAV/SİHA/eVTOL Flight Algorithms & UE5 Physics Simulation",
+      description: "UE5 ile fizik tabanlı uçuş mekaniği ve gerçek zamanlı aerodinamik veri görselleştirme sistemlerinin mimarisini tasarladı. İHA/SİHA ve eVTOL konseptleri için yapay zeka destekli otonom uçuş algoritmaları ve eğitim simülatörleri geliştirdi. 'Security by Design' prensipleriyle global standartlarda teknolojik ürünler üretti.",
+      highlights: [
+        "UE5 fizik tabanlı uçuş mekaniği ve aerodinamik telemetri görselleştirme",
+        "İHA/SİHA & eVTOL yapay zeka destekli otonom uçuş algoritmaları",
+        "'Security by Design' prensipleriyle savunma sanayii standartlarında mimari"
+      ],
+      stack: ["ROS2", "C++20", "Unreal Engine 5", "PyTorch", "PX4", "UAV Telemetry"],
+      icon: "Plane"
+    },
+    {
+      name: "Arkıl Games",
+      role: "Kurucu & Yaratıcı Direktör",
+      period: "Nisan 2026 – Günümüz",
+      category: "Game Dev / Mythology",
+      tagline: "Türk Mitolojisi Tabanlı Evren Tasarımı & Yeni Nesil Mekanikler",
+      description: "Türk mitolojisi tabanlı oyun evreni tasarımı ve konsept geliştirme süreçlerine liderlik etti. Küresel pazarda yerel motifleri evrensel dille sunan yüksek kaliteli oyun mekanikleri geliştirdi.",
+      highlights: [
+        "Türk mitolojisi tabanlı lore ve dinamik prosedürel evren kurgusu",
+        "Yeni nesil fizik ve yapay zeka tabanlı NPC davranış ağaçları",
+        "Yerel kültürel motifleri evrensel standartlarda sunan oyun mekaniği"
+      ],
+      stack: ["Unreal Engine 5", "C++", "Procedural Generation", "AI Behavior Trees"],
+      icon: "Gamepad2"
+    },
+    {
+      name: "Meta-Engineering Research Lab (MERL)",
+      role: "Baş Araştırmacı & Kurucu",
+      period: "Ocak 2026 – Günümüz",
+      category: "Research / Stochastic AI",
+      tagline: "Autonomous Code Factories & Stochastic Engineering Models",
+      description: "İnsan müdahalesiz otonom yazılım geliştirme süreçleri tasarladı. Deterministik mantıktan stokastik mühendislik modellerine geçiş sürecini yönetti. Operasyonel maliyetleri minimize eden 'kod fabrikası' modellerini geliştirdi.",
+      highlights: [
+        "İnsan müdahalesiz otonom kod fabrikası (autonomous code synthesis)",
+        "Deterministik mühendislikten stokastik zeka modellerine geçiş mimarisi",
+        "LLM ajan sürüleri ve orkestrasyon katmanı ile sıfır hata toleransı"
+      ],
+      stack: ["Python", "PyTorch", "LLM Agents", "Stochastic Modeling", "Compiler Design"],
+      icon: "BrainCircuit"
+    },
+    {
+      name: "Budak | Edge-AI Optimization",
+      role: "Kurucu & Baş Araştırma Mühendisi",
+      period: "Ocak 2026 – Günümüz",
+      category: "Edge AI / Model Pruning",
+      tagline: "%80 Model Budama & Donanım Seviyesinde Gizlilik",
+      description: "Model budama ve nicemleme teknikleriyle AI modellerini %80'e kadar optimize etti. Bulut maliyetlerini düşürürken donanım seviyesinde veri gizliliği koruması sağladı. Akıllı telefondan otonom sistemlere kadar internet bağımsız AI ekosistemi inşa etti.",
+      highlights: [
+        "Yapılandırılmış & yapılandırılmamış %80 model budama (pruning)",
+        "FP16, INT8, INT4 nicemleme & TFLite/ONNX ile cihaz üstü hızlandırma",
+        "İnternet bağımsız, sıfır bulut maliyetli Edge-AI ekosistemi"
+      ],
+      stack: ["TFLite", "ONNX Runtime", "PyTorch Pruning", "C++17/20", "Embedded Linux", "RTOS"],
+      icon: "Zap"
+    },
+    {
+      name: "Anka Silicon Dynamics",
+      role: "Kurucu & Baş Sistem Mimarı",
+      period: "Aralık 2025 – Günümüz",
+      category: "AI Distillation / Silicon",
+      tagline: "Donanım Bağımsız Zeka & Knowledge Distillation Mimarisi",
+      description: "Veri damıtma ve morfolojik optimizasyon teknikleriyle 'en az kaynakla en yüksek zeka' prensibini hayata geçirdi. Unsloth, vLLM ve QLoRA mimarileriyle donanım kısıtlarını yazılım inovasyonuyla aştı. Milli NPU/FPGA mimarileri için hazır yazılım ekosistemi ve simülasyonlar geliştirdi.",
+      highlights: [
+        "7B/8B modelleri devasa modeller seviyesine çıkaran Knowledge Distillation",
+        "Unsloth, vLLM ve QLoRA ile donanım kısıtlarını aşan yazılım ekosistemi",
+        "Milli NPU/FPGA çipleri için hazır simülasyon ve inference altyapısı"
+      ],
+      stack: ["PyTorch", "vLLM", "Unsloth", "QLoRA", "HuggingFace", "FPGA Simulation"],
+      icon: "Cpu"
+    }
+  ],
+  education: [
+    {
+      school: "Eskişehir Teknik Üniversitesi",
+      degree: "Ön Lisans",
+      field: "İnsansız Hava Aracı Teknolojisi ve Operasyonu",
+      status: "Eğitim Devam Ediyor",
+      icon: "Plane",
+      description: "İHA/SİHA sistem tasarımı, telemetri protokolleri, aviyonik mimari, aerodinamik hesaplamalar ve otonom görev planlama."
+    },
+    {
+      school: "İstanbul Üniversitesi",
+      degree: "Lisans",
+      field: "Yönetim Bilişim Sistemleri",
+      period: "Eylül 2025 – Haziran 2029",
+      icon: "Layers",
+      description: "Yazılım mimarisi ile stratejik iş modellerinin entegrasyonu, veri analitiği, teknoloji yönetimi ve siber güvenlik yönetişimi."
+    },
+    {
+      school: "Anadolu Üniversitesi",
+      degree: "Ön Lisans",
+      field: "Bilgisayar Programcılığı",
+      period: "Eylül 2025 – Haziran 2027",
+      icon: "Code2",
+      description: "Sistem programlama, veri yapıları, C++ ve Python tabanlı algoritmik verimlilik ve çekirdek yazılım geliştirme."
+    }
+  ],
+  aviation_accreditations: [
+    {
+      title: "İHA-1 Sportif/Amatör Pilotaj Lisansı",
+      issuer: "Sivil Havacılık Genel Müdürlüğü (SHGM)",
+      badge: "İHA-1 Pilot Lisansı",
+      category: "Pilotaj & Operasyon",
+      icon: "Plane"
+    },
+    {
+      title: "Havacılık ve Uzay Keşif Kampı",
+      issuer: "TÜBİTAK",
+      badge: "Uzay ve Havacılık",
+      category: "Uzay Bilimleri",
+      icon: "Rocket"
+    },
+    {
+      title: "Sualtı Sistemleri Eğitimi",
+      issuer: "T3 Vakfı",
+      badge: "Otonom Sualtı / ROV",
+      category: "Otonom Araçlar",
+      icon: "Anchor"
+    },
+    {
+      title: "INTERSTELLAR PROBLEM SOLVER",
+      issuer: "Türkiye Uzay Ajansı (TUA)",
+      badge: "Uzay Görev Mimarisi",
+      category: "Uzay Görevleri",
+      icon: "Orbit"
+    },
+    {
+      title: "ROTAMIZ UFKUN ÖTESİ",
+      issuer: "KTÜ GEMİDTEK",
+      badge: "Denizcilik & Otonom Mimariler",
+      category: "Deniz Sistemleri",
+      icon: "Compass"
+    }
+  ],
   blog_posts: [
     {
       title: "2026’ya Doğru Yazılım ve Siber Güvenlikte Paradigma Değişimi",
       summary: "Teknolojik Dönüşüm ve İş Gücünün Geleceği: Hayatta Kalma Reçetesi",
-      url: "https://medium.com/@bahattinyunus/2026ya-do%C4%9Fru-yaz%C4%B1l%C4%B1m-ve-siber-g%C3%BCvenlikte-paradigma-de%C4%9Fi%C5%9Fimi-hayatta-kalma-re%C3%A7etesi-19f6f09f75c7",
+      url: "https://medium.com/@archyunus/2026ya-do%C4%9Fru-yaz%C4%B1l%C4%B1m-ve-siber-g%C3%BCvenlikte-paradigma-de%C4%9Fi%C5%9Fimi-hayatta-kalma-re%C3%A7etesi-19f6f09f75c7",
       image: "/images/blog/paradigma.jpg",
       date: "2 Ocak 2026"
     },
     {
       title: "TEKNOFEST Bir Yarışma Değil, Bir Okuldur",
       summary: "Mühendislik Vizyonunuzu Yeniden Tanımlayın: Küresel Teknoloji Liderliğine Giden Yol",
-      url: "https://medium.com/@bahattinyunus/teknofest-bir-yar%C4%B1%C5%9Fma-de%C4%9Fil-bir-okuldur-m%C3%BChendislik-vizyonunuzu-yeniden-tan%C4%B1mlay%C4%B1n-908bce0bd7ab",
+      url: "https://medium.com/@archyunus/teknofest-bir-yar%C4%B1%C5%9Fma-de%C4%9Fil-bir-okuldur-m%C3%BChendislik-vizyonunuzu-yeniden-tan%C4%B1mlay%C4%B1n-908bce0bd7ab",
       image: "/images/blog/teknofest.jpg",
       date: "29 Aralık 2025"
     },
     {
       title: "Yapay Genel Zekâ (AGI) Yolunda Büyük Çatlak",
       summary: "İlya, LeCun ve Altman Nereye Koşuyor? Yapay Zekâda Yol Ayrımı: Devrim mi, İllüzyon mu?",
-      url: "https://medium.com/@bahattinyunus/yapay-genel-zek%C3%A2-agi-yolunda-b%C3%BCy%C3%BCk-%C3%A7atlak-i%CC%87lya-lecun-ve-altman-nereye-ko%C5%9Fuyor-c0535a22703e",
+      url: "https://medium.com/@archyunus/yapay-genel-zek%C3%A2-agi-yolunda-b%C3%BCy%C3%BCk-%C3%A7atlak-i%CC%87lya-lecun-ve-altman-nereye-ko%C5%9Fuyor-c0535a22703e",
       image: "/images/blog/agi.jpg",
       date: "27 Aralık 2025"
     },
     {
       title: "Dijital Sınır Boyları: Yapay Zekada Türkçenin Geleceği",
       summary: "Veri Egemenliği ve Yapay Zeka ile girdiğimiz diyaloglarda dil seçiminin stratejik önemi.",
-      url: "https://medium.com/@bahattinyunus/dijital-s%C4%B1n%C4%B1r-boylar%C4%B1-yapay-zekada-t%C3%BCrk%C3%A7enin-gelece%C4%9Fi-ve-veri-egemenli%C4%9Fi-7c6649103f38",
+      url: "https://medium.com/@archyunus/dijital-s%C4%B1n%C4%B1r-boylar%C4%B1-yapay-zekada-t%C3%BCrk%C3%A7enin-gelece%C4%9Fi-ve-veri-egemenli%C4%9Fi-7c6649103f38",
       image: "/images/blog/sinir.jpg",
       date: "25 Aralık 2025"
     },
     {
       title: "Gökyüzündeki Sessiz Tehdit: İHA Hareketliliği",
       summary: "Türkiye Hava Sahasında İHA Hareketliliği ve Genişleyen Savaşın Yeni Cephesi",
-      url: "https://medium.com/@bahattinyunus/g%C3%B6ky%C3%BCz%C3%BCndeki-sessiz-tehdit-t%C3%BCrkiye-hava-sahas%C4%B1nda-i%CC%87ha-hareketlili%C4%9Fi-ve-geni%C5%9Fleyen-sava%C5%9F%C4%B1n-yeni-952385656565",
+      url: "https://medium.com/@archyunus/g%C3%B6ky%C3%BCz%C3%BCndeki-sessiz-tehdit-t%C3%BCrkiye-hava-sahas%C4%B1nda-i%CC%87ha-hareketlili%C4%9Fi-ve-geni%C5%9Fleyen-sava%C5%9F%C4%B1n-yeni-952385656565",
       image: "/images/blog/iha.jpg",
       date: "25 Aralık 2025"
     },
     {
       title: "2026’da Finansal Özgürlüğün Anahtarı",
       summary: "Ustalaşmanız Gereken 7 Yapay Zeka Becerisi ve Yeni Bir Çağın Eşiğinde 'Süper Birey' Dönemi",
-      url: "https://medium.com/@bahattinyunus/2026da-finansal-%C3%B6zg%C3%BCrl%C3%BC%C4%9F%C3%BCn-anahtar%C4%B1-ustala%C5%9Fman%C4%B1z-gereken-7-yapay-zeka-becerisi-852365456565",
+      url: "https://medium.com/@archyunus/2026da-finansal-%C3%B6zg%C3%BCrl%C3%BC%C4%9F%C3%BCn-anahtar%C4%B1-ustala%C5%9Fman%C4%B1z-gereken-7-yapay-zeka-becerisi-852365456565",
       image: "/images/blog/finans.jpg",
       date: "23 Aralık 2025"
     }
   ],
   timeline: [
     {
-      year: "2026 - Halen",
-      title: "Founder, CEO & Chief Architect",
+      year: "Nisan 2026 - Günümüz",
+      title: "Kurucu & Baş Teknoloji Mimarı",
+      company: "Tulpar Aero-Dynamics",
+      description: "UE5 ile fizik tabanlı uçuş mekaniği ve aerodinamik telemetri simülatörleri. İHA/SİHA ve eVTOL için yapay zeka destekli otonom uçuş algoritmaları.",
+      icon: "Plane"
+    },
+    {
+      year: "Nisan 2026 - Günümüz",
+      title: "Kurucu & Yaratıcı Direktör",
+      company: "Arkıl Games",
+      description: "Türk mitolojisi tabanlı oyun evreni tasarımı ve yerel motiflerle evrensel oyun mekanikleri geliştirme liderliği.",
+      icon: "Gamepad2"
+    },
+    {
+      year: "Ocak 2026 - Günümüz",
+      title: "Baş Araştırmacı & Kurucu",
+      company: "Meta-Engineering Research Lab (MERL)",
+      description: "İnsan müdahalesiz otonom kod fabrikaları, deterministikten stokastik mühendislik modellerine geçiş mimarisi.",
+      icon: "BrainCircuit"
+    },
+    {
+      year: "Ocak 2026 - Günümüz",
+      title: "Kurucu & Baş Araştırma Mühendisi",
+      company: "Budak | Edge-AI Optimization",
+      description: "Model budama ve nicemleme ile AI modellerini %80 optimize eden, donanım seviyesinde veri gizliliği koruyan internet bağımsız Edge-AI ekosistemi.",
+      icon: "Zap"
+    },
+    {
+      year: "Aralık 2025 - Günümüz",
+      title: "Kurucu & Baş Sistem Mimarı",
       company: "Anka Silicon Dynamics",
-      description: "Türkiye’nin yapay zeka alanındaki dijital egemenliğini tesis etmek ve 'donanım bağımsız' bir zeka ekosistemi inşa etmek. ANKA-LLM Mimarisi, Knowledge Distillation ve Stratejik Optimizasyon üzerine Ar-Ge. Motto: 'Donanımı beklemiyoruz, donanım geldiğinde üzerinde koşacak zekayı hazırlıyoruz.'",
+      description: "Knowledge Distillation ile donanım bağımsız zeka ekosistemi. Unsloth, vLLM, QLoRA ve milli NPU/FPGA simülasyonları.",
       icon: "Cpu"
     },
     {
-      year: "2026 - Halen",
-      title: "Founder",
-      company: "Budak | Edge-AI Optimization",
-      description: "Yapay zeka modellerini uç cihazlara (Edge) entegre etmek için optimizasyon. Model Pruning, Quantization ve Edge-AI Deployment ile bulut bağımlılığını ortadan kaldıran sürdürülebilir, düşük gecikmeli AI çözümleri.",
-      icon: "Zap"
-    },
-    {
       year: "2025 - Halen",
-      title: "Student (Siber Vatan)",
-      company: "Siber Vatan Programı",
-      description: "Siber güvenlik ve yapay zeka alanında ileri düzey yetenek geliştirme programı. Mentörlük ve CTF yarışmalarıyla desteklenen, global endüstri standartlarında teknik yetkinlik kazanımı.",
+      title: "Siber Vatan Programı & Beyaz Şapkalı Hacker",
+      company: "T.C. Savunma Sanayii Başkanlığı / Siber Vatan",
+      description: "Siber güvenlik ve yapay zeka alanında ileri düzey yetenek geliştirme programı. Beyaz şapkalı hacker eğitimi, CTF ve siber savunma tatbikatları.",
       icon: "Shield"
-    },
-    {
-      year: "2023 - 2027",
-      title: "Yazılım Mühendisliği (Lisans)",
-      company: "Karadeniz Teknik Üniversitesi",
-      description: "KTÜ POST-AI STRATEJİK KOMUTA MERKEZİ. Mevcut müfredatı 'Base Layer' kabul edip, yapay zekayı 100x güç çarpanı olarak konumlandırarak kendi 'Modern Yazılım Mühendisliği' müfredatımı inşa ediyorum. Odak: AI Integration, Systems Design ve Prompt Engineering.",
-      icon: "Terminal"
-    },
-    {
-      year: "2025 - 2029",
-      title: "Yönetim Bilişim Sistemleri (Lisans)",
-      company: "İstanbul Üniversitesi",
-      description: "Statik bir diploma yerine, işletme vizyonu ile mühendislik disiplinini birleştiren hibrit bir yetkinlik seti. Veri analitiği ve iş süreçlerinin dijitalleşmesi üzerine odaklı stratejik gelişim.",
-      icon: "Layers"
-    },
-    {
-      year: "2025 - 2027",
-      title: "Bilgisayar Programcılığı (Önlisans)",
-      company: "Anadolu Üniversitesi",
-      description: "Operasyonel çeviklik ve teknik uygulama derinliği kazanmak için 'çok boyutlu risk yönetimi' prensibiyle yapılandırılmış akademik süreç.",
-      icon: "Code2"
-    },
-    {
-      year: "2024 - 2026",
-      title: "Önlisans Eğitimi",
-      company: "Recep Tayyip Erdoğan Üniversitesi",
-      description: "KTÜ ekosistemine coğrafi yakınlığı optimize ederek laboratuvar ve teknik network imkanlarından yararlanılan stratejik akademik hamle.",
-      icon: "Book"
-    },
-
-    {
-      year: "2022 - 2024",
-      title: "Önlisans Eğitimi",
-      company: "Akdeniz Üniversitesi",
-      description: "Kamu görevindeki sorumluluklarla eş zamanlı yürütülen, üniversite imkanlarının bir 'hub' olarak kullanıldığı self-learning dönemi.",
-      icon: "Book"
-    },
-    {
-      year: "2021 - 2023",
-      title: "Maden Mühendisliği (Lisans)",
-      company: "Muğla Sıtkı Koçman Üniversitesi",
-      description: "'Cevherimiz Sensin' projesiyle bölüm birincisi olarak yerleşildiği, ardından profesyonel hayata (memuriyet) geçiş yapılan dönem.",
-      icon: "Activity"
-    },
-    {
-      year: "2019 - 2021",
-      title: "Stratejik Üniversite Hazırlık",
-      company: "Bireysel Gelişim",
-      description: "Sıralamanın 198k -> 104k -> 68k şeklinde sistematik olarak yükseltildiği, 'continuous improvement' (sürekli iyileştirme) disiplininin kazanıldığı dönem.",
-      icon: "Zap"
-    },
-    {
-      year: "2015 - 2019",
-      title: "Lise Eğitimi & Açık Lise",
-      company: "Şereflikoçhisar Anadolu & AÖL",
-      description: "Zaman yönetimini optimize etmek için son sınıfta Açık Lise'ye geçiş. Kısıtlı imkanlarla temel bilimlerde (Matematik, Biyoloji) derinlemesine bireysel araştırma.",
-      icon: "Book"
     }
   ],
   ai_tools: [

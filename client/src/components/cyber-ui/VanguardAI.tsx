@@ -19,7 +19,7 @@ export const VanguardAI = () => {
     const [messages, setMessages] = useState<Message[]>([
         {
             sender: 'vanguard',
-            text: `VANGUARD_AI // v4.5 AKTİF.\nBen Bahattin Yunus Çetin'in otonom zeka asistanıyım. Projeler, teknik mimariler, Anka Silicon Dynamics veya iletişim kanalları hakkında soru sorabilirsiniz.`,
+            text: `VANGUARD_AI // v5.0 AKTİF.\nBen Yunus Çetin'in otonom zeka asistanıyım. Tulpar Aero-Dynamics, Budak (%80 Edge-AI), Arkıl Games, MERL, Anka Silicon Dynamics, SHGM İHA-1 pilotajı, üniversite eğitimleri ve 120+ sertifikasyon hakkında soru sorabilirsiniz.`,
         }
     ]);
     const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -27,11 +27,12 @@ export const VanguardAI = () => {
     const [, setLocation] = useLocation();
 
     const quickPrompts = [
-        { label: "👤 Bahattin Yunus Kimdir?", query: "Bahattin Yunus Çetin kimdir?" },
-        { label: "🦅 Anka Silicon Dynamics", query: "Anka Silicon Dynamics nedir?" },
-        { label: "🐝 BeeRoute & Trabzon Protokolü", query: "BeeRoute ve Trabzon Protokolü nedir?" },
-        { label: "🛡 Siber Vatan & Savunma", query: "Siber güvenlik ve Siber Vatan tecrübesi nedir?" },
-        { label: "⚡ Cephanelik & Yetkinlikler", query: "Hangi dilleri ve teknolojileri kullanıyor?" },
+        { label: "👤 Yunus Çetin Kimdir?", query: "Yunus Çetin kimdir?" },
+        { label: "🛸 Tulpar Aero-Dynamics & İHA-1", query: "Tulpar Aero-Dynamics ve İHA çalışmaları nedir?" },
+        { label: "⚡ Budak Edge-AI & %80 Budama", query: "Budak Edge-AI optimizasyonu nedir?" },
+        { label: "🎮 Arkıl Games (Mitoloji)", query: "Arkıl Games nedir?" },
+        { label: "🦅 Anka Silicon & MERL", query: "Anka Silicon Dynamics ve MERL nedir?" },
+        { label: "📜 120+ Sertifika & Eğitim", query: "Eğitim geçmişi ve sertifikaları nelerdir?" }
     ];
 
     useEffect(() => {
@@ -43,51 +44,79 @@ export const VanguardAI = () => {
     const generateResponse = (query: string): { text: string; action?: { label: string; path: string } } => {
         const q = query.toLowerCase().trim();
 
-        if (q.includes("kimdir") || q.includes("kim") || q.includes("who") || q.includes("biyografi")) {
+        if (q.includes("kimdir") || q.includes("kim") || q.includes("who") || q.includes("biyografi") || q.includes("yunus")) {
             return {
-                text: "Bahattin Yunus Çetin; Karadeniz Teknik Üniversitesi Yazılım Mühendisliği öğrencisi, Anka Silicon Dynamics & Budak kurucusu ve Siber Vatanseverdir. LLM optimizasyonu, donanım bağımsız zeka ekosistemleri ve karmaşık sistem mimarileri üzerine çalışmaktadır.",
-                action: { label: "Doktrini İncele", path: "/doctrine" }
+                text: "Yunus ÇETİN (Ankara, Türkiye); AI Developer, UAV Systems Architect ve Gömülü Sistemler uzmanıdır. Tulpar Aero-Dynamics, Arkıl Games, MERL, Budak ve Anka Silicon Dynamics'in kurucusudur. ROS2, C++17/20, PyTorch, Unreal Engine 5 ve SHGM İHA-1 pilotaj lisansıyla savunma ve otonom sistemler mimarisi inşa etmektedir.",
+                action: { label: "Cephaneliği İncele", path: "/arsenal" }
+            };
+        }
+
+        if (q.includes("tulpar") || q.includes("iha") || q.includes("uav") || q.includes("drone") || q.includes("uçuş") || q.includes("evtol") || q.includes("havacılık") || q.includes("pilot")) {
+            return {
+                text: "Tulpar Aero-Dynamics: UE5 ile fizik tabanlı 6-DoF uçuş mekaniği, aerodinamik veri görselleştirme, İHA/SİHA ve eVTOL için yapay zeka destekli otonom uçuş algoritmaları ve simülatörleri geliştirmektedir. Yunus Çetin aynı zamanda SHGM onaylı lisanslı İHA-1 pilotudur.",
+                action: { label: "Tulpar Flight Deck'i Aç", path: "/arsenal" }
+            };
+        }
+
+        if (q.includes("budak") || q.includes("edge") || q.includes("prun") || q.includes("budama") || q.includes("nicemleme") || q.includes("quant")) {
+            return {
+                text: "Budak | Edge-AI Optimization: Yapay zeka modellerini yapılandırılmış model budama ve INT8/INT4 nicemleme teknikleriyle %80'e kadar küçülterek bulut maliyetlerini sıfırlayan, cihaz üstünde donanım seviyesinde veri gizliliği sağlayan internet bağımsız Edge-AI ekosistemidir.",
+                action: { label: "Budak Lab'da Test Et", path: "/arsenal" }
+            };
+        }
+
+        if (q.includes("arkıl") || q.includes("oyun") || q.includes("game") || q.includes("mitoloji")) {
+            return {
+                text: "Arkıl Games: Türk mitolojisi tabanlı lore, evren tasarımı ve yeni nesil prosedürel mekanikler geliştiren bağımsız oyun stüdyosudur. Unreal Engine 5 ve C++ ile yerel motifleri evrensel standartlarda oyuncularla buluşturmaktadır.",
+                action: { label: "Operasyonları Gör", path: "/operations" }
+            };
+        }
+
+        if (q.includes("merl") || q.includes("meta") || q.includes("kod fabrik") || q.includes("stokastik")) {
+            return {
+                text: "Meta-Engineering Research Lab (MERL): İnsan müdahalesiz otonom yazılım sentezi (kod fabrikası) ve deterministik mantıktan stokastik zeka modellerine geçiş süreçleri üzerine araştırma yürüten ileri mühendislik laboratuvarıdır.",
+                action: { label: "Doktrin Sayfasına Git", path: "/doctrine" }
             };
         }
 
         if (q.includes("anka") || q.includes("silicon") || q.includes("distill") || q.includes("llm")) {
             return {
-                text: "Anka Silicon Dynamics: Türkiye'nin yapay zeka egemenliğini tesis etmek amacıyla 'donanım bağımsız' zeka ekosistemi inşa ediyor. Knowledge Distillation ile 7B/8B modelleri devasa modellerin yetenekleriyle donatıp uç cihazlarda çalıştırılabilir kılıyor.",
-                action: { label: "Operasyonları Gör", path: "/operations" }
+                text: "Anka Silicon Dynamics: Türkiye'nin yapay zeka alanında dijital egemenliğini tesis etmek amacıyla 'donanım bağımsız' zeka ekosistemi inşa ediyor. Knowledge Distillation ile 7B/8B modelleri devasa modeller seviyesine taşıyıp milli NPU/FPGA çipleri için hazır hale getiriyor.",
+                action: { label: "Doktrini İncele", path: "/doctrine" }
             };
         }
 
-        if (q.includes("bee") || q.includes("route") || q.includes("trabzon") || q.includes("rota") || q.includes("optimizasyon")) {
+        if (q.includes("eğitim") || q.includes("üniversite") || q.includes("okul") || q.includes("sertifika") || q.includes("lisans") || q.includes("btk") || q.includes("akademik")) {
             return {
-                text: "BeeRoute: NP-Hard problemlerine biyo-mimetik (arı kolonisi) çözümler sunan, O(G·S·n²) karmaşıklıkta çalışan ve 'Trabzon Protokolü' katmanını içeren endüstriyel stokastik rota optimizasyon motorudur.",
-                action: { label: "BeeRoute Sistem Detayı", path: "/operations/beeroute" }
+                text: "Akademik Eğitim:\n- Eskişehir Teknik Ünv. (İnsansız Hava Aracı Teknolojisi ve Operasyonu)\n- İstanbul Ünv. (Yönetim Bilişim Sistemleri - Lisans)\n- Anadolu Ünv. (Bilgisayar Programcılığı)\n\nAkreditasyonlar: SHGM İHA-1 Lisansı, TÜBİTAK Uzay, T3 Vakfı Sualtı, TUA Interstellar ve BTK Akademi bünyesinde 120'den fazla onaylı sertifika.",
+                action: { label: "120+ Sertifika Kasası", path: "/intelligence" }
             };
         }
 
-        if (q.includes("siber") || q.includes("güvenlik") || q.includes("vatan") || q.includes("ctf") || q.includes("security")) {
+        if (q.includes("siber") || q.includes("güvenlik") || q.includes("vatan") || q.includes("ctf") || q.includes("security") || q.includes("hacker")) {
             return {
-                text: "T.C. Savunma Sanayii Başkanlığı ve Sanayi ve Teknoloji Bakanlığı himayesindeki Siber Vatan programı mezunu. CTF dereceleri, Ethical Hacking, sıfır güven mimarisi (Zero-Trust) ve siber tehdit modelleme uzmanlığı bulunmaktadır.",
+                text: "T.C. Savunma Sanayii Başkanlığı ve Sanayi ve Teknoloji Bakanlığı himayesindeki Siber Vatan programı kapsamında Beyaz Şapkalı Hacker eğitimi, CTF dereceleri, Ethical Hacking ve Zero-Trust siber savunma yetkinlikleri.",
                 action: { label: "İstihbarat Arşivi", path: "/intelligence" }
             };
         }
 
         if (q.includes("yetenek") || q.includes("dil") || q.includes("teknoloji") || q.includes("stack") || q.includes("cephanelik") || q.includes("arsenal")) {
             return {
-                text: "Temel Diller: Python, C++, Go, Rust, JavaScript/TypeScript.\nAI & ML: PyTorch, HuggingFace, Unsloth, vLLM, QLoRA, Knowledge Distillation.\nSistem: Docker, Kubernetes, Linux, MQTT, Zero-Trust.",
+                text: "Core Stack: ROS2 / Robotik, Python (PyTorch), C++ 17/20, Edge AI (TFLite), Unreal Engine 5, QLoRA, vLLM, RTOS & Gömülü Sistemler, UAV/İHA Sistemleri.",
                 action: { label: "Arsenal Sayfasına Git", path: "/arsenal" }
             };
         }
 
         if (q.includes("iletişim") || q.includes("mail") || q.includes("contact") || q.includes("ulaş")) {
             return {
-                text: "Bahattin Yunus ile LinkedIn veya şifreli Comms kanalı üzerinden doğrudan güvenli bağlantı kurabilirsiniz.",
+                text: "Yunus Çetin ile bahattinyunuscetin@hotmail.com e-posta adresi, LinkedIn veya şifreli Comms kanalı üzerinden doğrudan güvenli bağlantı kurabilirsiniz.",
                 action: { label: "Comms Kanalını Aç", path: "/comms" }
             };
         }
 
         // Generic intelligent fallback
         return {
-            text: `[Sistem Yanıtı] "${query}" sorgusu işlendi. ${profileData.featured_projects.length} adet aktif operasyon ve ${profileData.skills.languages.join(', ')} cephaneliği ile ilgili tüm veriler sistemde doğrulanmıştır. Detay için ilgili menüyü seçebilirsiniz.`,
+            text: `[Sistem Yanıtı] "${query}" sorgusu işlendi. 5 aktif girişim (Tulpar, Budak, Arkıl, MERL, Anka), ${profileData.featured_projects.length} operasyonel repo ve 120+ sertifika kaydı doğrulanmıştır. Detay için ilgili menüyü seçebilirsiniz.`,
             action: { label: "Tüm Operasyonlar", path: "/operations" }
         };
     };
