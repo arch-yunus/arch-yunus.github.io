@@ -66,12 +66,12 @@ Bu repo; **Otonom İHA/SİHA Sistemleri**, **Büyük Dil Modelleri (LLM/Knowledg
 
 ## 🎓 Akademik Matris & Akreditasyonlar
 
-- 🏫 **Hacettepe Üniversitesi** — Alternatif Enerji Kaynakları Teknolojisi (2026 – 2028)
+- 🏫 **Orta Doğu Teknik Üniversitesi (ODTÜ)** — Fizik Öğretmenliği (İngilizce Hazırlık, 2026 – Devam Ediyor)
+- 🏫 **Hacettepe Üniversitesi** — Alternatif Enerji Kaynakları Teknolojisi (2026 – Devam Ediyor)
 - 🏫 **Karadeniz Teknik Üniversitesi** — Yazılım Mühendisliği (2023 – 2026)
 - 🏫 **İstanbul Üniversitesi** — Yönetim Bilişim Sistemleri (AUZEF, 2025 – 2029)
 - 🏫 **Anadolu Üniversitesi** — Bilgisayar Programcılığı (AÖF, 2025 – 2027)
 - 🏫 **Atatürk Üniversitesi** — Tarih (ATA-AÖF, 2026 – 2030)
-- 🏫 **Eskişehir Teknik Üniversitesi** — İHA Teknolojisi ve Operatörlüğü (2025 – 2027)
 - 🎖️ **SHGM:** İHA-1 Sportif/Amatör Pilotaj Lisansı
 - 🎖️ **TEI:** 6. Dönem Havacılık Motorları Okulu (Gaz Türbinli Motorlar)
 - 🎖️ **TÜBİTAK & GSB:** KAMP+ Havacılık ve Uzay Kampı (Bursa - FezaArsivi)

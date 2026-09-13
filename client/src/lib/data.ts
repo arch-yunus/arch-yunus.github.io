@@ -142,10 +142,18 @@ export const profileData = {
   ],
   education: [
     {
+      school: "Orta Doğu Teknik Üniversitesi",
+      degree: "Lisans",
+      field: "Fizik Öğretmenliği (İngilizce Hazırlık)",
+      period: "2026 – Devam Ediyor",
+      icon: "Orbit",
+      description: "Temel fizik prensipleri, analitik düşünme, kuantum ve mekanik temelleri ile ileri düzey pedagojik ve bilimsel formasyon (İngilizce Hazırlık Eğitimi)."
+    },
+    {
       school: "Hacettepe Üniversitesi",
       degree: "Ön Lisans",
       field: "Alternatif Enerji Kaynakları Teknolojisi",
-      period: "2026 – 2028",
+      period: "2026 – Devam Ediyor",
       icon: "Zap",
       description: "Yenilenebilir ve alternatif enerji teknolojileri, enerji depolama sistemleri, donanım güç optimizasyonu ve otonom sistemlerde sürdürülebilir enerji yönetimi."
     },
@@ -180,14 +188,6 @@ export const profileData = {
       period: "2026 – 2030",
       icon: "Book",
       description: "Türk mitolojisi, stratejik tarihsel analiz, devlet felsefesi ve oyun evreni (Arkıl Games) tasarımı için derin kültürel doktrin altyapısı."
-    },
-    {
-      school: "Eskişehir Teknik Üniversitesi",
-      degree: "Ön Lisans",
-      field: "İnsansız Hava Aracı Teknolojisi ve Operasyonu",
-      status: "Eğitim Devam Ediyor",
-      icon: "Plane",
-      description: "İHA/SİHA sistem tasarımı, telemetri protokolleri, aviyonik mimari, aerodinamik hesaplamalar ve otonom görev planlama."
     }
   ],
   aviation_accreditations: [
